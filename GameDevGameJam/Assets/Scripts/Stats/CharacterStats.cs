@@ -71,15 +71,13 @@ public class CharacterStats : MonoBehaviour
         damage = damage - defence.GetValue();
         damage = Mathf.Clamp(damage, 1, int.MaxValue);
         currentHealth -= damage;
+        currentHealth = Mathf.Clamp(currentHealth, 0, int.MaxValue);
         ChangeHealth?.Invoke(currentHealth);
 
         if (currentHealth <= 0)
         {
             OnDeath?.Invoke();
-            if (gameObject.tag != "Player")
-            {
-                Die();
-            }
+            
         }
     }
 
