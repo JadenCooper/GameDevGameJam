@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         //playerStats = GetComponent<PlayerStats>();
         //RangedWeapon = GetComponentInChildren<RangedWeapon>();
     }
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb2d.velocity = movement * Time.deltaTime;
-        //animator.SetBool("isMoving", isMoving);
+        animator.SetBool("isMoving", isMoving);
         //RangedWeapon.SetStats(playerStats);
     }
 }
