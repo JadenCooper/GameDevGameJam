@@ -46,7 +46,7 @@ public class RangedWeapon : MonoBehaviour
     }
     public void Shoot()
     {
-        //audioSource.Play();
+        audioSource.Play();
         GameObject newBullet = Instantiate(bullet, barrel.position, barrel.rotation);
         newBullet.transform.position = barrel.position;
         newBullet.transform.rotation = barrel.rotation;
