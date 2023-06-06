@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
 
     public void Move(Vector2 movementVector)
     {
-        Debug.Log(movementVector);
         this.movementVector = movementVector;
         CalculateSpeed();
         movementVector *= currentSpeed;
