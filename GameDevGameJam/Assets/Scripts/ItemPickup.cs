@@ -26,6 +26,7 @@ public class ItemPickup : Interactable
     {
         item.PickUp();
         Debug.Log(item.name);
+        gameObject.GetComponent<AudioSource>().Play();
         Destroy(gameObject);
     }
 }
