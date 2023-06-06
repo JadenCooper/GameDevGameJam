@@ -30,6 +30,7 @@ public class ItemManager : MonoBehaviour
     //public PlayerStats playerStats;
     public GameObject popUpParent;
     public GameObject modsText;
+    public int coins = 0;
 
     public void AddItem(Item newItem)
     {
@@ -69,5 +70,10 @@ public class ItemManager : MonoBehaviour
         text.text = "New Item! '" + item.name + "'";
         yield return new WaitForSeconds(3f);
         popUpParent.SetActive(false);
+    }
+
+    public void AddCoins(int value)
+    {
+        coins += value;
     }
 }
