@@ -14,6 +14,7 @@ public class PlayerInput : MonoBehaviour
     private InputActionReference movement, attack, pointerPosition, reload, swapWeapon;
     private void Update()
     {
+        // These Actions/Events Give Values
         OnMovementInput?.Invoke(movement.action.ReadValue<Vector2>().normalized);
         OnPointerInput?.Invoke(GetPointerPosition());
     }
@@ -25,6 +26,7 @@ public class PlayerInput : MonoBehaviour
 
     private void OnEnable()
     {
+        // These Actions/Events Just Say They Occurred
         attack.action.performed += PerformAttack;
         swapWeapon.action.performed += PreformWeaponSwap;
         reload.action.performed += PreformReload;
@@ -47,6 +49,5 @@ public class PlayerInput : MonoBehaviour
     private void PreformReload(InputAction.CallbackContext obj)
     {
         OnReload?.Invoke();
-        Debug.Log("Reload");
     }
 }

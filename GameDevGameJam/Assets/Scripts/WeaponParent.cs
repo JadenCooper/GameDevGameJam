@@ -7,8 +7,8 @@ public class WeaponParent : MonoBehaviour
     public Vector2 PointerPosition { get => pointerInput; set => pointerInput = value; }
     private Vector2 pointerInput;
     public bool IsAttacking { get; private set; }
-    public RangedWeapon EquipedWeapon;
-    public SpriteRenderer charcterRenderer, weaponRenderer;
+    public RangedWeapon EquippedWeapon;
+    public SpriteRenderer characterRenderer, weaponRenderer;
     public Vector2 facedDirection;
     private float IntialScale;
     private void Start()
@@ -34,24 +34,25 @@ public class WeaponParent : MonoBehaviour
         }
         transform.localScale = scale;
 
+        // Makes So Weapons Displays Above Player When Below And Behind When Above
         if (transform.eulerAngles.z > 0 && transform.eulerAngles.z < 180)
         {
-            weaponRenderer.sortingOrder = charcterRenderer.sortingOrder - 1;
+            weaponRenderer.sortingOrder = characterRenderer.sortingOrder - 1;
         }
         else
         {
-            weaponRenderer.sortingOrder = charcterRenderer.sortingOrder + 1;
+            weaponRenderer.sortingOrder = characterRenderer.sortingOrder + 1;
         }
     }
 
     public void Attack()
     {
-        EquipedWeapon.direction = facedDirection;
-        EquipedWeapon.Attack();
+        EquippedWeapon.direction = facedDirection;
+        EquippedWeapon.Attack();
     }
 
     public void Reload()
     {
-        EquipedWeapon.Reload();
+        EquippedWeapon.Reload();
     }
 }

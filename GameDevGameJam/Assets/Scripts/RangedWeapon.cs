@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RangedWeapon : MonoBehaviour
 {
-    public Transform barrel;
+    public Transform barrel; // Where Bullet Is Spawned
     public bool isReloading = false;
     public int currentClip;
     public bool IsAttacking { get; set; }

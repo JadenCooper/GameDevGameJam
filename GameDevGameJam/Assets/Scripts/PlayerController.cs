@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckSide()
     {
+        // This Method Makes The Character Sprite Flip To Face The Way Your Moving
         if (movementVector.x < 0)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = true;

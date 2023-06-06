@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour
     }
     public void Initialize(float newDamage, float Speed, float newMaxDistance, Vector2 direction)
     {
+        // Sets The Bullet's Stats From The Shooter
         bulletData.Direction = direction;
         startPostion = transform.position;
         rb2d.velocity = bulletData.Direction * Speed;
@@ -27,12 +28,14 @@ public class Bullet : MonoBehaviour
         conquaredDistance = Vector2.Distance(transform.position, startPostion);
         if (conquaredDistance > MaxDistance)
         {
+            // Bullet Has Gone Out Of Range
             Destroy(gameObject);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject hit = collision.gameObject;
+        // Makes So The Bullet Cant Hit The Shooter On The Way Out Or Friendly Fire
         if (hit.layer == gameObject.layer)
         {
             Debug.Log("Ignore");
