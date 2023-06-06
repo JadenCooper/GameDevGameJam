@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 1912773869}
   - component: {fileID: 1912773868}
   - component: {fileID: 1912773870}
+  - component: {fileID: 1912773871}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -289,7 +290,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -328,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: f5f064b61f11c984ea1a6b0d6cb57c18, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -343,7 +344,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Play
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!61 &1912773869
@@ -387,13 +388,13 @@ MonoBehaviour:
   OnMovementInput:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1912773871}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -459,8 +460,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  movement: {fileID: -1680190386980627800, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  movement: {fileID: -8653634914293389364, guid: f5f064b61f11c984ea1a6b0d6cb57c18, type: 3}
   attack: {fileID: 7231597593446190608, guid: f5f064b61f11c984ea1a6b0d6cb57c18, type: 3}
   pointerPosition: {fileID: -2882460349697334078, guid: f5f064b61f11c984ea1a6b0d6cb57c18, type: 3}
   reload: {fileID: -671421800199513357, guid: f5f064b61f11c984ea1a6b0d6cb57c18, type: 3}
   swapWeapon: {fileID: 2071911809716695428, guid: f5f064b61f11c984ea1a6b0d6cb57c18, type: 3}
+--- !u!114 &1912773871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912773864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91109af2aa5eb6845b36a6980c8739a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSpeed: 0
+  Acceleration: 50
+  MaxSpeed: 250
+  isMoving: 0

@@ -32,7 +32,7 @@ public class PlayerInput : MonoBehaviour
     private void OnDisable()
     {
         attack.action.performed -= PerformAttack;
-        //swapWeapon.action.performed -= PreformWeaponSwap;
+        swapWeapon.action.performed -= PreformWeaponSwap;
         reload.action.performed -= PreformReload;
     }
 
