@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8361034431496846830, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3b2e367728e0bde4b9a83e8855f695c1, type: 2}
     - target: {fileID: 8361034431496846832, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
       propertyPath: movement
       value: 
@@ -19,6 +23,10 @@ PrefabInstance:
       propertyPath: m_NeverAutoSwitchControlSchemes
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8361034431496846836, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1465804756, guid: 66e7bee7e7224fa4c9d216dd5b82b037, type: 3}
     - target: {fileID: 8361034431496846837, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
       propertyPath: m_RootOrder
       value: 0
