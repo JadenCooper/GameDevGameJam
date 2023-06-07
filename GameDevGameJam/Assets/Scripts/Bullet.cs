@@ -17,6 +17,11 @@ public class Bullet : MonoBehaviour
     public void Initialize(float newDamage, float Speed, float newMaxDistance, Vector2 direction)
     {
         // Sets The Bullet's Stats From The Shooter
+        if (direction == Vector2.zero)
+        {
+            Debug.Log("Zero");
+            direction = Vector2.right;
+        }
         bulletData.Direction = direction;
         startPostion = transform.position;
         rb2d.velocity = bulletData.Direction * Speed;

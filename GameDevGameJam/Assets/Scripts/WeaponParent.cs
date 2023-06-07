@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class WeaponParent : MonoBehaviour
 {
-    public Vector3 PointerPosition { get => pointerInput; set => pointerInput = value; }
-    private Vector3 pointerInput;
+    public Vector2 PointerPosition { get => pointerInput; set => pointerInput = value; }
+    private Vector2 pointerInput;
     public bool IsAttacking { get; private set; }
     public RangedWeapon EquippedWeapon;
     public SpriteRenderer characterRenderer, weaponRenderer;
     public Vector2 facedDirection;
     private float IntialScale;
+
+    public bool PC = true;
     private void Start()
     {
         IntialScale = transform.localScale.y;
@@ -21,8 +23,17 @@ public class WeaponParent : MonoBehaviour
         {
             return;
         }
-        //facedDirection = ((Vector3)PointerPosition - transform.position).normalized;
-        facedDirection = PointerPosition;
+
+        if (PC)
+        {
+            // Preprocessing Of Direction For PC
+            facedDirection = ((Vector3)PointerPosition - transform.position).normalized;
+        }
+        else
+        {
+            facedDirection = PointerPosition;
+        }
+
         transform.right = facedDirection;
         Vector2 scale = transform.localScale;
         if (facedDirection.x < 0)

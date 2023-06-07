@@ -7,8 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerInputManager : MonoBehaviour
 {
     // This script handles all player inputs and sends that information out in events
-    public UnityEvent<Vector2> OnMovementInput;
-    public UnityEvent<Vector3> OnPointerInput;
+    public UnityEvent<Vector2> OnMovementInput, OnPointerInput;
     public UnityEvent OnAttack, OnReload, OnWeaponSwapInput;
 
     private InputActionAsset inputAsset;
@@ -21,6 +20,7 @@ public class PlayerInputManager : MonoBehaviour
         if (GetComponent<PlayerInput>().currentControlScheme != "PC")
         {
             PC = false;
+            GetComponentInChildren<WeaponParent>().PC = false;
         }
     }
     private void Update()
@@ -31,12 +31,10 @@ public class PlayerInputManager : MonoBehaviour
     }
     private Vector3 GetPointerPosition()
     {
-        Vector3 mousePos = player.FindAction("MousePosition").ReadValue<Vector2>();
+        Vector2 mousePos = player.FindAction("MousePosition").ReadValue<Vector2>();
         if (PC)
         {
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-            mousePos = (mousePos - transform.position).normalized;
-            return mousePos;
+            return Camera.main.ScreenToWorldPoint(mousePos);
         }
         return mousePos;
     }
