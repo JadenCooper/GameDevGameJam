@@ -35,26 +35,26 @@ public class CharacterStats : MonoBehaviour
 
     public void Start()
     {
-        //foreach (Item item in ItemManager.instance.items)
-        //{
-        //    damage.AddModifier(item.damageModifier);
-        //    speed.AddModifier(item.speedModifier);
-        //    defence.AddModifier(item.defenceModifier);
-        //    if (item.healthModifier > 0)
-        //    {
-        //        maxHealth += item.healthModifier;
-        //        currentHealth += item.healthModifier;
-        //        ChangeHealth?.Invoke(currentHealth);
-        //    }
-        //    weight.AddModifier(item.weightModifier);
-        //    magSize.AddModifier(item.magSizeModifier);
-        //    spread.AddModifier(item.spreadModifier);
-        //    bulletSpeed.AddModifier(item.bulletSpeedModifier);
-        //    fireRate.AddModifier(item.fireRateModifier);
-        //    reloadSpeed.AddModifier(item.reloadSpeedModifier);
-        //    bulletWeight.AddModifier(item.bulletWeightModifier);
-        //    range.AddModifier(item.rangeModifier);
-        //}
+        foreach (Item item in ItemManager.instance.items)
+        {
+            damage.AddModifier(item.damageModifier);
+            speed.AddModifier(item.speedModifier);
+            defence.AddModifier(item.defenceModifier);
+            if (item.healthModifier > 0)
+            {
+                maxHealth += item.healthModifier;
+                currentHealth += item.healthModifier;
+                ChangeHealth?.Invoke(currentHealth);
+            }
+            weight.AddModifier(item.weightModifier);
+            magSize.AddModifier(item.magSizeModifier);
+            spread.AddModifier(item.spreadModifier);
+            bulletSpeed.AddModifier(item.bulletSpeedModifier);
+            fireRate.AddModifier(item.fireRateModifier);
+            reloadSpeed.AddModifier(item.reloadSpeedModifier);
+            bulletWeight.AddModifier(item.bulletWeightModifier);
+            range.AddModifier(item.rangeModifier);
+        }
     }
 
     public void Update()

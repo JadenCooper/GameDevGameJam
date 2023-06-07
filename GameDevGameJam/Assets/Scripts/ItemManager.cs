@@ -27,7 +27,7 @@ public class ItemManager : MonoBehaviour
     #endregion
 
     public List<Item> items = new List<Item>();
-    //public PlayerStats playerStats;
+    public PlayerStats playerStats;
     public GameObject popUpParent;
     public GameObject modsText;
     public int coins = 0;
@@ -35,7 +35,7 @@ public class ItemManager : MonoBehaviour
     public void AddItem(Item newItem)
     {
         items.Add(newItem);
-        //playerStats.ItemChanged(newItem);
+        playerStats.ItemChanged(newItem);
         StartCoroutine(PlayItemPopup(newItem));
     }
 
