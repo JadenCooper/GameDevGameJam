@@ -11,6 +11,8 @@ public class WeaponParent : MonoBehaviour
     public SpriteRenderer characterRenderer, weaponRenderer;
     public Vector2 facedDirection;
     private float IntialScale;
+
+    public bool PC = true;
     private void Start()
     {
         IntialScale = transform.localScale.y;
@@ -21,7 +23,17 @@ public class WeaponParent : MonoBehaviour
         {
             return;
         }
-        facedDirection = ((Vector3)PointerPosition - transform.position).normalized;
+
+        if (PC)
+        {
+            // Preprocessing Of Direction For PC
+            facedDirection = ((Vector3)PointerPosition - transform.position).normalized;
+        }
+        else
+        {
+            facedDirection = PointerPosition;
+        }
+
         transform.right = facedDirection;
         Vector2 scale = transform.localScale;
         if (facedDirection.x < 0)

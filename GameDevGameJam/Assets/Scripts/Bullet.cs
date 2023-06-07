@@ -17,6 +17,11 @@ public class Bullet : MonoBehaviour
     public void Initialize(float newDamage, float Speed, float newMaxDistance, Vector2 direction)
     {
         // Sets The Bullet's Stats From The Shooter
+        if (direction == Vector2.zero)
+        {
+            Debug.Log("Zero");
+            direction = Vector2.right;
+        }
         bulletData.Direction = direction;
         startPostion = transform.position;
         rb2d.velocity = bulletData.Direction * Speed;
@@ -38,7 +43,6 @@ public class Bullet : MonoBehaviour
         // Makes So The Bullet Cant Hit The Shooter On The Way Out Or Friendly Fire
         if (hit.layer == gameObject.layer)
         {
-            Debug.Log("Ignore");
             Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), hit.GetComponent<Collider2D>());
             return;
         }
