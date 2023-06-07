@@ -38,7 +38,6 @@ public class Bullet : MonoBehaviour
         // Makes So The Bullet Cant Hit The Shooter On The Way Out Or Friendly Fire
         if (hit.layer == gameObject.layer)
         {
-            Debug.Log("Ignore");
             Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), hit.GetComponent<Collider2D>());
             return;
         }
