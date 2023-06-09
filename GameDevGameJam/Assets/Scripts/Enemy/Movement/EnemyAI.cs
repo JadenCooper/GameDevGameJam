@@ -21,7 +21,7 @@ public class EnemyAI : MonoBehaviour
     private float detectionDelay = 0.05f, aiUpdateDelay = 0.05f;
 
     [SerializeField]
-    private float attackDelay = 1f, attackDistance = 0.5f;
+    private float attackDelay = 1f, attackDistance = 1f;
 
     [SerializeField]
     private Vector2 movementInput;
@@ -114,14 +114,18 @@ public class EnemyAI : MonoBehaviour
 
     private void CheckSide()
     {
-        Vector2 movementVector = (aiData.currentTarget.position - transform.position).normalized;
-        if (movementVector.x < 0)
+        if(aiData.currentTarget != null)
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else
-        {
-            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            Vector2 movementVector = (aiData.currentTarget.position - transform.position).normalized;
+            
+            if (movementVector.x < 0)
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            }
         }
     }
 }

@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zombie : KnockBack
+public class Zombie : MonoBehaviour
 {
-    public void HitPlayer(GameObject hitTarget)
+    public KnockBack knockback;
+
+    public void OnCollisionStay2D(Collision2D other) 
     {
-        base.Knock(hitTarget.transform.position);
-        Debug.Log("Hit player");
+        if(other.gameObject.tag == "Player")
+        {
+            Debug.Log("On collision Zombie script");
+            knockback.Knock(other.transform.position);
+        }
     }
 }
