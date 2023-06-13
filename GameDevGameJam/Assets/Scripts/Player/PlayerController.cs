@@ -10,16 +10,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     public float currentSpeed;
     public float Acceleration = 50;
-    public float MaxSpeed = 250; // To Be Replaced By The PlayerStats Speed
     private Animator animator;
     public bool isMoving;
-    //private PlayerStats playerStats;
+    private PlayerStats playerStats;
     //private RangedWeapon RangedWeapon;
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        //playerStats = GetComponent<PlayerStats>();
+        playerStats = GetComponent<PlayerStats>();
         //RangedWeapon = GetComponentInChildren<RangedWeapon>();
     }
     private void Start()
@@ -48,7 +47,7 @@ public class PlayerController : MonoBehaviour
             isMoving = true;
             CheckSide();
         }
-        currentSpeed = Mathf.Clamp(currentSpeed, 0, MaxSpeed);
+        currentSpeed = Mathf.Clamp(currentSpeed, 0, playerStats.speed.GetValue());
     }
 
     private void CheckSide()
