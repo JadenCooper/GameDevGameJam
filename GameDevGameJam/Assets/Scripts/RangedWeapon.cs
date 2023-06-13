@@ -11,25 +11,17 @@ public class RangedWeapon : MonoBehaviour
     public bool attackBlock;
     public Vector2 direction;
    // public RangedStats rangedStats;
-   // private CharacterStats playerStats;
+    private CharacterStats playerStats;
     public AudioSource audioSource;
 
 
     // Temp Weapon Stats To Be Replaced By Stats System When Implemented
     public GameObject bullet;
-    public float bulletDamage;
-    public float bulletSpeed;
-    public float range;
-    public float magSize;
-    public float fireRate;
-    public float reloadSpeed;
-
 
     private void Start()
     {
-        //playerStats = gameObject.GetComponentInParent<PlayerStats>();
-        //currentClip = (int)playerStats.magSize.GetValue();
-        currentClip = (int)magSize;
+        playerStats = gameObject.GetComponentInParent<PlayerStats>();
+        currentClip = (int)playerStats.magSize.GetValue();
     }
 
     public void Attack()
@@ -51,7 +43,7 @@ public class RangedWeapon : MonoBehaviour
         newBullet.transform.position = barrel.position;
         newBullet.transform.rotation = barrel.rotation;
         newBullet.layer = gameObject.layer;
-        newBullet.GetComponent<Bullet>().Initialize(bulletDamage, bulletSpeed, range, direction);
+        newBullet.GetComponent<Bullet>().Initialize(playerStats.damage.GetValue(), playerStats.bulletSpeed.GetValue(), playerStats.range.GetValue(), direction);
         currentClip--;
         if (currentClip <= 0)
         {
@@ -61,14 +53,14 @@ public class RangedWeapon : MonoBehaviour
     }
     public IEnumerator Reloading()
     {
-        yield return new WaitForSeconds(reloadSpeed);
+        yield return new WaitForSeconds(playerStats.reloadSpeed.GetValue());
         isReloading = false;
-        currentClip = (int)magSize;
+        currentClip = (int)playerStats.magSize.GetValue();
     }
 
     public IEnumerator DelayAttack()
     {
-        yield return new WaitForSeconds(fireRate);
+        yield return new WaitForSeconds(playerStats.fireRate.GetValue());
         attackBlock = false;
     }
     public void Reload()

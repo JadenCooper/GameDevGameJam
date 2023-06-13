@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 8361034431496846830}
   - component: {fileID: 676733319941722467}
   - component: {fileID: 6908614194700735757}
+  - component: {fileID: 5325509005430665590}
+  - component: {fileID: 451901611192919221}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -183,7 +185,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSpeed: 0
   Acceleration: 50
-  MaxSpeed: 250
   isMoving: 0
 --- !u!95 &8361034431496846830
 Animator:
@@ -344,21 +345,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnWeaponSwapInput:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8361034432257173853}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   OnAttack:
     m_PersistentCalls:
       m_Calls:
@@ -389,11 +375,85 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  movement: {fileID: -8653634914293389364, guid: f5f064b61f11c984ea1a6b0d6cb57c18, type: 3}
-  attack: {fileID: 7231597593446190608, guid: f5f064b61f11c984ea1a6b0d6cb57c18, type: 3}
-  pointerPosition: {fileID: -2882460349697334078, guid: f5f064b61f11c984ea1a6b0d6cb57c18, type: 3}
-  reload: {fileID: -671421800199513357, guid: f5f064b61f11c984ea1a6b0d6cb57c18, type: 3}
-  swapWeapon: {fileID: 2071911809716695428, guid: f5f064b61f11c984ea1a6b0d6cb57c18, type: 3}
+  OnWeaponSwapInput:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8361034432257173853}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5325509005430665590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361034431496846838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88241aa40c3b937429517084041e16ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  damage:
+    baseValue: 5
+  speed:
+    baseValue: 175
+  defence:
+    baseValue: 0
+  weight:
+    baseValue: 0
+  magSize:
+    baseValue: 5
+  spread:
+    baseValue: 0
+  bulletSpeed:
+    baseValue: 30
+  fireRate:
+    baseValue: 0.6
+  reloadSpeed:
+    baseValue: 1.8
+  bulletWeight:
+    baseValue: 0
+  range:
+    baseValue: 10
+  ChangeHealth:
+    m_PersistentCalls:
+      m_Calls: []
+  SetHealth:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  deathscreen: {fileID: 0}
+  grid: {fileID: 0}
+--- !u!114 &451901611192919221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361034431496846838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2f038d63db9c544ac975456f8a5cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+  playerStats: {fileID: 0}
+  popUpParent: {fileID: 0}
+  modsText: {fileID: 0}
+  coins: 0
 --- !u!1001 &1524856649639339779
 PrefabInstance:
   m_ObjectHideFlags: 0
