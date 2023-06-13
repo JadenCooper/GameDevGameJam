@@ -36,7 +36,7 @@ public class ItemManager : MonoBehaviour
     {
         items.Add(newItem);
         playerStats.ItemChanged(newItem);
-        StartCoroutine(PlayItemPopup(newItem));
+        //StartCoroutine(PlayItemPopup(newItem));
     }
 
     private IEnumerator PlayItemPopup(Item item)

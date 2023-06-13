@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  playerStats: {fileID: 0}
+  playerStats: {fileID: 5325509005430665590}
   popUpParent: {fileID: 0}
   modsText: {fileID: 0}
   coins: 0

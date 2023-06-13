@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6262196e880e6147a8aaa88399f6d8b, type: 3}
   m_Name: Damage Up
   m_EditorClassIdentifier: 
-  name: New Item
+  name: Damage Up
   icon: {fileID: 0}
-  damageModifier: 0
+  damageModifier: 10
   speedModifier: 0
   defenceModifier: 0
   healthModifier: 0
@@ -39,7 +39,31 @@ MonoBehaviour:
   - Reload
   - Bullet Weight
   - Range
+  - DMG
+  - SPD
+  - DEF
+  - HP
+  - Weight
+  - Mag Size
+  - Spread
+  - Bullet Speed
+  - Fire Rate
+  - Reload
+  - Bullet Weight
+  - Range
   mods:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   - 0
   - 0
   - 0
