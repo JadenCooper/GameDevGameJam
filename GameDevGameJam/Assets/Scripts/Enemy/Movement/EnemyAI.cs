@@ -94,9 +94,11 @@ public class EnemyAI : MonoBehaviour
             if(distance < attackDistance)
             {
                 movementInput = Vector2.zero;
+                CheckSide();
 
                 // Attack the player
                 Debug.Log("Attack");
+                OnAttackPressed?.Invoke();
 
                 yield return new WaitForSeconds(attackDelay);
                 StartCoroutine(ChaseAndAttack());
@@ -104,8 +106,26 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 movementInput = contextSolver.GetDirectionToMove(steeringBehaviours, aiData);
+                CheckSide();
                 yield return new WaitForSeconds(aiUpdateDelay);
                 StartCoroutine(ChaseAndAttack());
+            }
+        }
+    }
+
+    private void CheckSide()
+    {
+        if(aiData.currentTarget != null)
+        {
+            Vector2 movementVector = (aiData.currentTarget.position - transform.position).normalized;
+            
+            if (movementVector.x < 0)
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
             }
         }
     }
