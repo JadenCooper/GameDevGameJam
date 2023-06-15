@@ -19,13 +19,15 @@ public class ArenaManager : MonoBehaviour
     [SerializeField] private GameObject spawnPointParent;
     [SerializeField] private List<Transform> spawnPoints = new List<Transform>();
 
+    [HideInInspector] public List<GameObject> enemies = new List<GameObject>();
+
     public Wave[] waves;
     public float waveInterval = 5f;
 
     private int currentWave = 0;
     private float lastSpwanTime;
     private int enemiesSpawned = 0;
-    private int totalEnemies;
+    private bool end = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,13 +40,12 @@ public class ArenaManager : MonoBehaviour
         }
 
         lastSpwanTime = Time.time;
-        totalEnemies = waves[currentWave].maxEnemies;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enemiesSpawned < totalEnemies)
+        if (currentWave < waves.Count())
         {
             float timeInterval = Time.time - lastSpwanTime;
             float spawnInterval = waves[currentWave].spawnInterval;
@@ -54,10 +55,16 @@ public class ArenaManager : MonoBehaviour
                 lastSpwanTime = Time.time;
                 if (enemiesSpawned <= waves[currentWave].maxEnemies)
                 {
-                    newEnemy = (GameObject)Instantiate((waves[currentWave].enemies[UnityEngine.Random.Range(0, waves[currentWave].enemies.Count())]), spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Count())]);
+                    newEnemy = Instantiate((waves[currentWave].enemies[UnityEngine.Random.Range(0, waves[currentWave].enemies.Count())]));
+                    newEnemy.transform.position = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Count())].transform.position;
+                    enemies.Add(newEnemy);
                     enemiesSpawned++;
+                    if (enemiesSpawned == waves[currentWave].maxEnemies)
+                    {
+                        end = false;
+                    }
                 }
-                if (totalEnemies == waves[currentWave].maxEnemies)
+                else if (!end)
                 {
                     StartCoroutine(StartNewWave());
                 }
@@ -67,9 +74,9 @@ public class ArenaManager : MonoBehaviour
 
     public IEnumerator StartNewWave()
     {
+        end = true;
         yield return new WaitForSeconds(waveInterval);
         currentWave++;
         enemiesSpawned = 0;
-        totalEnemies = waves[currentWave].maxEnemies;
     }
 }
