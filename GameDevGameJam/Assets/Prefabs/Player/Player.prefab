@@ -60,7 +60,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -476,6 +476,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onStatsAlter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5264989711750298444}
+        m_TargetAssemblyTypeName: PlayerHUD, Assembly-CSharp
+        m_MethodName: AlterStatsDisplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5325509005430665590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,27 +681,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5527549053498439033, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.22619818
+      value: 0.16022262
       objectReference: {fileID: 0}
     - target: {fileID: 5527549053498439033, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.15466543
+      value: 0.13279264
       objectReference: {fileID: 0}
     - target: {fileID: 5527549053498439033, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.15466543
+      value: 0.13279264
       objectReference: {fileID: 0}
     - target: {fileID: 5527549053498439033, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.021
+      value: 1.0474
       objectReference: {fileID: 0}
     - target: {fileID: 5527549053498439033, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 534.6
+      value: 362.3
       objectReference: {fileID: 0}
     - target: {fileID: 5527549053498439033, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 307.6
+      value: 282.9
       objectReference: {fileID: 0}
     - target: {fileID: 5816272675625190884, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -694,27 +709,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5816272675945354832, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.112284
+      value: 0.097813986
       objectReference: {fileID: 0}
     - target: {fileID: 5816272675945354832, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.112284
+      value: 0.097813986
       objectReference: {fileID: 0}
     - target: {fileID: 5816272675945354832, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.112284
+      value: 0.097813986
       objectReference: {fileID: 0}
     - target: {fileID: 5816272675945354832, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -58.2433
+      value: -36.897
       objectReference: {fileID: 0}
     - target: {fileID: 5816272675945354832, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.6349945
+      value: -16.428
       objectReference: {fileID: 0}
     - target: {fileID: 5816272675945354832, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.1233
+      value: 1.1582
       objectReference: {fileID: 0}
     - target: {fileID: 7491660072897985284, guid: 6faa4d545ffe5d94f87286ee62699192, type: 3}
       propertyPath: m_Pivot.x

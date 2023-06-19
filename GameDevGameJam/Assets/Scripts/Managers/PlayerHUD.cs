@@ -34,25 +34,7 @@ public class PlayerHUD : MonoBehaviour
     {
         DisplayHealth();
         DisplayAmmoCount();
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            isShowing = !isShowing;
-        }
-        else if (Input.GetKey(KeyCode.Tab))
-        {
-            DisplayPlayerStats();
-        }
-        else
-        {
-            HidePlayerStats();
-        }
-
-        if (isShowing)
-        {
-            DisplayPlayerStats();
-        }
-
+        DisplayPlayerStats();
     }
 
     public void DisplayHealth()
@@ -65,14 +47,24 @@ public class PlayerHUD : MonoBehaviour
         ammoCount.text = "Ammo: " + rangedWeapon.currentClip.ToString() + " / " + characterStats.magSize.GetValue().ToString();
     }
 
+    public void AlterStatsDisplay()
+    {
+        isShowing = !isShowing;
+    }
     public void DisplayPlayerStats()
     {
-        playerStats.SetActive(true);
-
-        damage.text = "Damage: " + characterStats.damage.GetValue().ToString();
-        speed.text = "Speed: " + characterStats.speed.GetValue().ToString();
-        defence.text = "Defence: " + characterStats.defence.GetValue().ToString();
-        firerate.text = "Shoot Delay: " + characterStats.fireRate.GetValue().ToString();
+        if (!isShowing)
+        {
+            playerStats.SetActive(false);
+        }
+        else
+        {
+            playerStats.SetActive(true);
+            damage.text = "Damage: " + characterStats.damage.GetValue().ToString();
+            speed.text = "Speed: " + characterStats.speed.GetValue().ToString();
+            defence.text = "Defence: " + characterStats.defence.GetValue().ToString();
+            firerate.text = "Shoot Delay: " + characterStats.fireRate.GetValue().ToString();
+        }
     }
 
     public void HidePlayerStats()
