@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6262196e880e6147a8aaa88399f6d8b, type: 3}
+  m_Name: NewDamageUp
+  m_EditorClassIdentifier: 
+  name: New Damage Up
+  icon: {fileID: 21300000, guid: 3eb65d8264c3b6f40985f204042ee6de, type: 3}
+  damageModifier: 10
+  speedModifier: -20
+  defenceModifier: 8
+  healthModifier: 1
+  weightModifier: 1
+  magSizeModifier: 1
+  spreadModifier: 1
+  bulletSpeedModifier: 1
+  fireRateModifier: 11
+  reloadSpeedModifier: 1
+  bulletWeightModifier: 1
+  rangeModifier: 1
+  modsNames:
+  - DMG
+  - SPD
+  - DEF
+  - HP
+  - Weight
+  - Mag Size
+  - Spread
+  - Bullet Speed
+  - Fire Rate
+  - Reload
+  - Bullet Weight
+  - Range
+  mods:
+  - 10
+  - -20
+  - 8
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 11
+  - 1
+  - 1
+  - 1
