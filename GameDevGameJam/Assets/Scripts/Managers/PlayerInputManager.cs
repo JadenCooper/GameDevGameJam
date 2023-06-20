@@ -52,10 +52,10 @@ public class PlayerInputManager : MonoBehaviour
 
     private void OnDisable()
     {
-        player.FindAction("Reload").performed += PreformReload;
-        player.FindAction("Attack").performed += PerformAttack;
-        player.FindAction("Swap Weapon").performed += PreformWeaponSwap;
-        player.FindAction("Stats").performed += PreformStatsAlter;
+        player.FindAction("Reload").performed -= PreformReload;
+        player.FindAction("Attack").performed -= PerformAttack;
+        player.FindAction("Swap Weapon").performed -= PreformWeaponSwap;
+        player.FindAction("Stats").performed -= PreformStatsAlter;
     }
     private void PreformStatsAlter(InputAction.CallbackContext obj)
     {
