@@ -93,7 +93,6 @@ public class EnemyAI : MonoBehaviour
 
             if(distance < attackDistance)
             {
-                movementInput = Vector2.zero;
                 CheckSide();
 
                 // Attack the player
