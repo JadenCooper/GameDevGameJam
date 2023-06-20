@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6262196e880e6147a8aaa88399f6d8b, type: 3}
-  m_Name: NewDamageUp
+  m_Name: RustySilverRing
   m_EditorClassIdentifier: 
-  name: New Damage Up
-  icon: {fileID: 21300000, guid: 3eb65d8264c3b6f40985f204042ee6de, type: 3}
-  damageModifier: 10
-  speedModifier: -20
-  defenceModifier: 8
-  healthModifier: 1
-  weightModifier: 1
-  magSizeModifier: 1
-  spreadModifier: 1
-  bulletSpeedModifier: 1
-  fireRateModifier: 11
-  reloadSpeedModifier: 1
-  bulletWeightModifier: 1
-  rangeModifier: 1
+  name: Rusty Silver Ring
+  icon: {fileID: -1870863349, guid: 94c7c3a8eff28f3448e464cfc736e1e1, type: 3}
+  damageModifier: 0
+  speedModifier: 0
+  defenceModifier: 2
+  healthModifier: 10
+  weightModifier: 2
+  magSizeModifier: 0
+  spreadModifier: 0
+  bulletSpeedModifier: 0
+  fireRateModifier: 0
+  reloadSpeedModifier: 0
+  bulletWeightModifier: 0
+  rangeModifier: 0
   modsNames:
   - DMG
   - SPD
@@ -40,15 +40,15 @@ MonoBehaviour:
   - Bullet Weight
   - Range
   mods:
-  - 10
-  - -20
-  - 8
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 11
-  - 1
-  - 1
-  - 1
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0

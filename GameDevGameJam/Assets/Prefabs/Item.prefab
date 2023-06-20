@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0.68706363, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 1
-  item: {fileID: 11400000, guid: 4552305d37be098428315aa991b42e38, type: 2}
+  item: {fileID: 11400000, guid: 069e001dab456d84a85814908c678ffe, type: 2}
 --- !u!82 &1476607932408548983
 AudioSource:
   m_ObjectHideFlags: 0

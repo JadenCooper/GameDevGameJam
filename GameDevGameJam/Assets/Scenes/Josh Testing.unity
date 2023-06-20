@@ -15991,10 +15991,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 451901611192919221, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
-      propertyPath: modsText
-      value: 
-      objectReference: {fileID: 7258728474360257866, guid: 4ccf60ba1f85f114dbec82ad9d2fbbff, type: 3}
-    - target: {fileID: 451901611192919221, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
       propertyPath: modsParent
       value: 
       objectReference: {fileID: 1670503032}
@@ -16067,17 +16063,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coins
       objectReference: {fileID: 0}
-    - target: {fileID: 6554058333154123875, guid: c12e8b6fa469766499a722526f031141, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6723871057509120874, guid: c12e8b6fa469766499a722526f031141, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6723871057509120874, guid: c12e8b6fa469766499a722526f031141, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2
+      value: -3.81
       objectReference: {fileID: 0}
     - target: {fileID: 6723871057509120874, guid: c12e8b6fa469766499a722526f031141, type: 3}
       propertyPath: m_LocalPosition.y

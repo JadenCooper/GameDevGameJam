@@ -74,9 +74,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d76f896dec2be147b298cc7456e0144, type: 3}
-  m_Color: {r: 1, g: 0.8577048, b: 0, a: 1}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 351152556, guid: 94c7c3a8eff28f3448e464cfc736e1e1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,6 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 1
+  value: 0
+  min: 99
+  max: 200
+  bigCoinPile: {fileID: 1531207860, guid: 94c7c3a8eff28f3448e464cfc736e1e1, type: 3}
 --- !u!82 &8849777849183747593
 AudioSource:
   m_ObjectHideFlags: 0
