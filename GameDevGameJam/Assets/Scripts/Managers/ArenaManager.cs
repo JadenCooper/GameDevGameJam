@@ -47,7 +47,7 @@ public class ArenaManager : MonoBehaviour
     private int currentWave = 0;
     private float lastSpwanTime;
     private int enemiesSpawned = 0;
-    private bool end = false;
+    public bool end = false;
     [HideInInspector] public bool hasShopped = true;
 
     // Start is called before the first frame update
