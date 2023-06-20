@@ -36,6 +36,7 @@ public class CoinPickup : Interactable
     private void PickUp()
     {
         ItemManager.instance.AddCoins(value);
-        gameObject.GetComponent<AudioSource>().Play();
+        AudioManager.instance.CoinPickup();
+        Destroy(gameObject);
     }
 }
