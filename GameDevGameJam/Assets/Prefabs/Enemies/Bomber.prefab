@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490959281442068415}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ShrapneLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490959281775696243}
   - component: {fileID: 490959281775696140}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: TargetDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,13 +75,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3146add84450f4db77b6f654fd1d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 5
+  detectionRange: 12
   obstaclesLayerMask:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 200
   playerLayerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   showGizmos: 1
 --- !u!1 &490959281960117317
 GameObject:
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490959281960117319}
   - component: {fileID: 490959281960117318}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ObstacleDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490959282234156161}
   - component: {fileID: 490959282234156162}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ObstacleAvoidance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490959282429606890}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Shrapnel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490959282589997276}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ShrapneLocation (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490959282871259449}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ShrapneLocation (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 490959283001111106}
   - component: {fileID: 490959283001111107}
   - component: {fileID: 8962548117721188848}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Bomber
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ Transform:
   m_GameObject: {fileID: 490959283001111113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.65, y: -3.22, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3918148, y: 1.3918148, z: 1.3918148}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 490959283033579476}
@@ -711,7 +711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490959283033579476}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Detectors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -744,7 +744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490959283059054405}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SteeringBehaviours
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,7 +779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490959283363608180}
   - component: {fileID: 490959283363608187}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ContextSolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490959283400191240}
   - component: {fileID: 490959283400191241}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SeekBehaviour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,7 +869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490959283450303848}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ShrapneLocation (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

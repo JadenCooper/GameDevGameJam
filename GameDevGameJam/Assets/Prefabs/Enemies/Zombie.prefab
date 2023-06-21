@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8537962743707974837}
   - component: {fileID: 8537962743707974838}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SeekBehaviour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8537962743777209982}
   - component: {fileID: 8537962743777209981}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ObstacleDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8537962743859770664}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SteeringBehaviours
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8537962744094626252}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Detectors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8537962744110575359}
   - component: {fileID: 8537962744110575358}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ObstacleAvoidance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 8537962744366019975}
   - component: {fileID: 66057681826215403}
   - component: {fileID: 733836406222300525}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ Transform:
   m_GameObject: {fileID: 8537962744366019977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.83, y: 1.13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3712, y: 1.3712, z: 1.3712}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8537962744094626252}
@@ -380,6 +380,9 @@ MonoBehaviour:
   OnAttack:
     m_PersistentCalls:
       m_Calls: []
+  WalkSound:
+    m_PersistentCalls:
+      m_Calls: []
   OnMovementInput:
     m_PersistentCalls:
       m_Calls:
@@ -422,7 +425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddff8c11ff4811b41b293301dc25b185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 2
   acceleration: 50
   deacceleration: 100
   currentSpeed: 0
@@ -657,7 +659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8537962744417895007}
   - component: {fileID: 8537962744417895006}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: TargetDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,13 +693,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3146add84450f4db77b6f654fd1d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 5
+  detectionRange: 10
   obstaclesLayerMask:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 200
   playerLayerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   showGizmos: 1
 --- !u!1 &8537962745228104984
 GameObject:
@@ -709,7 +711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8537962745228104991}
   - component: {fileID: 8537962745228104990}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ContextSolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
