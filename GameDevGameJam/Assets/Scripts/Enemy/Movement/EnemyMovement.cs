@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    CharacterStats characterStats;
+
     private Rigidbody2D rb2d;
 
     [SerializeField]
@@ -11,25 +13,28 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private float currentSpeed = 0;
     private Vector2 oldMovementInput;
+
     public Vector2 MovementInput { get; set; }
 
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        characterStats = GetComponent<CharacterStats>();
     }
 
     private void FixedUpdate()
     {
+        float speed = characterStats.speed.GetValue();
         if (MovementInput.magnitude > 0 && currentSpeed >= 0)
         {
             oldMovementInput = MovementInput;
-            currentSpeed += acceleration * maxSpeed * Time.deltaTime;
+            currentSpeed += acceleration * speed * Time.deltaTime;
         }
         else
         {
-            currentSpeed -= deacceleration * maxSpeed * Time.deltaTime;
+            currentSpeed -= deacceleration * speed * Time.deltaTime;
         }
-        currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
+        currentSpeed = Mathf.Clamp(currentSpeed, 0, speed);
         rb2d.velocity = oldMovementInput * currentSpeed;
     }
 }
