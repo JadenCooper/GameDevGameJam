@@ -26,13 +26,26 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource itemPickup;
     public AudioSource coinPickup;
+    public AudioSource doorOpen;
+    public AudioSource doorClose;
     // Start is called before the first frame update
     public void ItemPickup()
     {
         itemPickup.Play();
     }
+
     public void CoinPickup()
     {
         coinPickup.Play();
+    }
+
+    public void DoorOpen()
+    {
+        doorOpen.Play();
+    }
+
+    public void DoorClose()
+    {
+        doorClose.Play();
     }
 }

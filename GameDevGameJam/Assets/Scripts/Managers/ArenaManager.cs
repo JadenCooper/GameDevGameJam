@@ -16,6 +16,26 @@ public class Wave
 
 public class ArenaManager : MonoBehaviour
 {
+    #region Singleton
+    public static ArenaManager instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<ArenaManager>();
+            }
+            return _instance;
+        }
+    }
+    static ArenaManager _instance;
+
+    private void Awake()
+    {
+        _instance = this;
+    }
+    #endregion
+
     [SerializeField] private GameObject spawnPointParent;
     [SerializeField] private List<Transform> spawnPoints = new List<Transform>();
 
@@ -27,7 +47,9 @@ public class ArenaManager : MonoBehaviour
     private int currentWave = 0;
     private float lastSpwanTime;
     private int enemiesSpawned = 0;
-    private bool end = false;
+    public bool end = false;
+    [HideInInspector] public bool hasShopped = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,10 +83,11 @@ public class ArenaManager : MonoBehaviour
                     enemiesSpawned++;
                     if (enemiesSpawned == waves[currentWave].maxEnemies)
                     {
-                        end = false;
+                        end = true;
+                        hasShopped = false;
                     }
                 }
-                else if (!end)
+                else if (end && hasShopped)
                 {
                     StartCoroutine(StartNewWave());
                 }
@@ -74,7 +97,7 @@ public class ArenaManager : MonoBehaviour
 
     public IEnumerator StartNewWave()
     {
-        end = true;
+        end = false;
         yield return new WaitForSeconds(waveInterval);
         currentWave++;
         enemiesSpawned = 0;
