@@ -214,6 +214,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1042204760760581347, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042204760760581347, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065799671662835390, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065799671662835390, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
+      propertyPath: field of view
+      value: 49.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133039948596496395, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6165592463872719143, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6165592463872719143, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6908614194700735757, guid: e8b451a318bc5884f82663ce85088b12, type: 3}
       propertyPath: move.m_Id
       value: eae806eb-b8a6-4df4-81e4-2ad2d51dbe62
