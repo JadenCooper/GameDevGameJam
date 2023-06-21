@@ -265,7 +265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 490959283001111113, guid: 70b4805915bbd8240a8df47e2196e056, type: 3}
       propertyPath: m_Name
-      value: Bomber
+      value: Bomber Variant
       objectReference: {fileID: 0}
     - target: {fileID: 490959283450303848, guid: 70b4805915bbd8240a8df47e2196e056, type: 3}
       propertyPath: m_LocalPosition.y

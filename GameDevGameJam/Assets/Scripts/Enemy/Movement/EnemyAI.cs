@@ -27,7 +27,7 @@ public class EnemyAI : MonoBehaviour
     private Vector2 movementInput;
 
     //Inputs sent from the Enemy AI to the Enemy controller
-    public UnityEvent OnAttack;
+    public UnityEvent OnAttack, WalkSound;
     public UnityEvent<Vector2> OnMovementInput;
 
     bool following = false;
@@ -105,6 +105,7 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 movementInput = contextSolver.GetDirectionToMove(steeringBehaviours, aiData);
+                WalkSound?.Invoke();
                 CheckSide();
                 yield return new WaitForSeconds(aiUpdateDelay);
                 StartCoroutine(ChaseAndAttack());

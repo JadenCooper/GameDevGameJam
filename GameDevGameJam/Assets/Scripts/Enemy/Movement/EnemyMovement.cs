@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    CharacterStats characterStats;
+    private CharacterStats characterStats;
 
     private Rigidbody2D rb2d;
 
     [SerializeField]
-    private float maxSpeed = 2, acceleration = 50, deacceleration = 100;
+    private float acceleration = 50, deacceleration = 100;
     [SerializeField]
     private float currentSpeed = 0;
     private Vector2 oldMovementInput;

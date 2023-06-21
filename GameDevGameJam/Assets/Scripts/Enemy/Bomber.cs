@@ -13,12 +13,16 @@ public class Bomber : MonoBehaviour
     [SerializeField]
     private Vector2[] fireDirections = new Vector2[4];
 
+    [SerializeField]
+    private float fuseTime = 0.2f;
+    
     public GameObject fireBall;
 
-    private float fuseTime = 0.2f;
+    private AudioSource audioSource;
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         characterStats = GetComponent<CharacterStats>();
     }
 
@@ -72,5 +76,10 @@ public class Bomber : MonoBehaviour
 
         Shrapnel();
         Destroy(gameObject);
+    }
+
+    public void PlayWheelSounds()
+    {
+        audioSource.Play();
     }
 }
