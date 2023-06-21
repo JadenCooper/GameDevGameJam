@@ -23,10 +23,14 @@ public class Bomber : MonoBehaviour
     [SerializeField]
     private AudioClip clip;
 
+    [SerializeField]
+    private GameObject player;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         characterStats = GetComponent<CharacterStats>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void StartFuze()
@@ -86,7 +90,7 @@ public class Bomber : MonoBehaviour
     IEnumerator Suicide()
     {
         yield return new WaitForSeconds(fuseTime);
-
+        player.GetComponent<CharacterStats>().TakeDamage(gameObject.GetComponent<CharacterStats>().damage.GetValue());
         Shrapnel();
         Destroy(gameObject);
     }
