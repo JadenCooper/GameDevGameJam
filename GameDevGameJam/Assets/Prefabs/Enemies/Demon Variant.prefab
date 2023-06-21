@@ -38,6 +38,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1797461787823271104, guid: bd369907864ab5c498a2edf3c3fb1a62, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5455369363834274243, guid: bd369907864ab5c498a2edf3c3fb1a62, type: 3}
       propertyPath: Mouths.Array.size
       value: 2
@@ -108,7 +112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5455369363834274254, guid: bd369907864ab5c498a2edf3c3fb1a62, type: 3}
       propertyPath: maxHealth
-      value: 7
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd369907864ab5c498a2edf3c3fb1a62, type: 3}
