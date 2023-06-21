@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class PlayerInputManager : MonoBehaviour
 {
     // This script handles all player inputs and sends that information out in events
     public UnityEvent<Vector2> OnMovementInput, OnPointerInput;
-    public UnityEvent OnAttack, OnReload, OnWeaponSwapInput;
+    public UnityEvent OnAttack, OnReload, OnWeaponSwapInput, onStatsAlter;
 
     private InputActionAsset inputAsset;
     private InputActionMap player;
@@ -45,12 +46,20 @@ public class PlayerInputManager : MonoBehaviour
         player.FindAction("Reload").performed += PreformReload;
         player.FindAction("Attack").performed += PerformAttack;
         player.FindAction("Swap Weapon").performed += PreformWeaponSwap;
+        player.FindAction("Stats").performed += PreformStatsAlter;
     }
+
+
     private void OnDisable()
     {
-        player.FindAction("Reload").performed += PreformReload;
-        player.FindAction("Attack").performed += PerformAttack;
-        player.FindAction("Swap Weapon").performed += PreformWeaponSwap;
+        player.FindAction("Reload").performed -= PreformReload;
+        player.FindAction("Attack").performed -= PerformAttack;
+        player.FindAction("Swap Weapon").performed -= PreformWeaponSwap;
+        player.FindAction("Stats").performed -= PreformStatsAlter;
+    }
+    private void PreformStatsAlter(InputAction.CallbackContext obj)
+    {
+        onStatsAlter.Invoke();
     }
 
     private void PerformAttack(InputAction.CallbackContext obj)

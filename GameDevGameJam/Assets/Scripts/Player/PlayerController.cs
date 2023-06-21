@@ -68,4 +68,5 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isMoving", isMoving);
         //RangedWeapon.SetStats(playerStats);
     }
+
 }
