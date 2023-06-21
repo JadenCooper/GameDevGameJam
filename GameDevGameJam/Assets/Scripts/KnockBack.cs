@@ -19,7 +19,6 @@ public class KnockBack : MonoBehaviour
         // Calculate the direction of the knockback
         Vector3 direction = (transform.position - sendersPosition).normalized;
         // Apply the knockback
-
         rb2d.AddForce(((characterMass - knockBackStrength) * direction), ForceMode2D.Impulse);
         StartCoroutine(Reset(rb2d));
     }

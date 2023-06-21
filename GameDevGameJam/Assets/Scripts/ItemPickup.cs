@@ -24,9 +24,10 @@ public class ItemPickup : Interactable
 
     void PickUp()
     {
+        
         item.PickUp();
         Debug.Log(item.name);
-        gameObject.GetComponent<AudioSource>().Play();
+        AudioManager.instance.ItemPickup();
         Destroy(gameObject);
     }
 }
