@@ -19,7 +19,7 @@ public class Zombie : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Debug.Log("On collision Zombie script");
-            knockback.Knock(other.transform.position);
+            knockback.Knock(other.transform.position, other.gameObject);
         }
     }
 
