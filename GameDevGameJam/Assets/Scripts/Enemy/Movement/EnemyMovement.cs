@@ -24,17 +24,20 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float speed = characterStats.speed.GetValue();
-        if (MovementInput.magnitude > 0 && currentSpeed >= 0)
+        if (characterStats != null)
         {
-            oldMovementInput = MovementInput;
-            currentSpeed += acceleration * speed * Time.deltaTime;
+            float speed = characterStats.speed.GetValue();
+            if (MovementInput.magnitude > 0 && currentSpeed >= 0)
+            {
+                oldMovementInput = MovementInput;
+                currentSpeed += acceleration * speed * Time.deltaTime;
+            }
+            else
+            {
+                currentSpeed -= deacceleration * speed * Time.deltaTime;
+            }
+            currentSpeed = Mathf.Clamp(currentSpeed, 0, speed);
+            rb2d.velocity = oldMovementInput * currentSpeed;
         }
-        else
-        {
-            currentSpeed -= deacceleration * speed * Time.deltaTime;
-        }
-        currentSpeed = Mathf.Clamp(currentSpeed, 0, speed);
-        rb2d.velocity = oldMovementInput * currentSpeed;
     }
 }

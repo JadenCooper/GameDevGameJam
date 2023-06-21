@@ -20,6 +20,9 @@ public class Bomber : MonoBehaviour
 
     private AudioSource audioSource;
 
+    [SerializeField]
+    private AudioClip clip;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -33,6 +36,7 @@ public class Bomber : MonoBehaviour
 
     public void Shrapnel() 
     {
+       
         int[] directions;
         GameObject sh = Instantiate(shrap);
 
@@ -41,7 +45,14 @@ public class Bomber : MonoBehaviour
 
         List<Transform> fireBallLocations = new List<Transform>();
 
-        for(int i=0;i < sh.transform.childCount; i++)
+        AudioSource newAudioSource = sh.AddComponent<AudioSource>();
+        newAudioSource.Stop();
+        newAudioSource.clip = clip;
+        newAudioSource.loop = false;
+        newAudioSource.Play();
+
+
+        for (int i=0;i < sh.transform.childCount; i++)
         {
             Transform child = sh.transform.GetChild(i);
             fireBallLocations.Add(child);
@@ -68,6 +79,8 @@ public class Bomber : MonoBehaviour
                     fireDirections[i]
                 );
         }
+
+        Destroy(sh, 2f);
     }
 
     IEnumerator Suicide()

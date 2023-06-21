@@ -459,6 +459,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  WalkSound:
+    m_PersistentCalls:
+      m_Calls: []
   OnMovementInput:
     m_PersistentCalls:
       m_Calls:
@@ -545,6 +548,7 @@ MonoBehaviour:
   - {x: -2, y: 0}
   fuseTime: 0.2
   fireBall: {fileID: 3514368902704956732, guid: 51051ae6a69a4c74085b497120d285f2, type: 3}
+  clip: {fileID: 8300000, guid: 871afb33bacbb0b419b075c6d46e5190, type: 3}
 --- !u!114 &490959283001111107
 MonoBehaviour:
   m_ObjectHideFlags: 0
