@@ -9,7 +9,8 @@ public class ShopItems : MonoBehaviour
     public Item[] lateGameItems;
     public GameObject prefab;
 
-    private List<GameObject> spawnedItems = new List<GameObject>();
+    private List<Item> spawnedItems = new List<Item>();
+    private List<GameObject> spawnedGameObjects = new List<GameObject>();
 
     public void SpawnItem(Vector3Int position, int gameStage)
     {
@@ -34,22 +35,31 @@ public class ShopItems : MonoBehaviour
 
         if (items != null && items.Length > 0)
         {
-            int randomNum = Random.Range(0, items.Length);
-            //GameObject itemPrefab = items[randomNum];
-            GameObject spawnedItem = Instantiate(prefab, position, Quaternion.identity); // yeah I needed help on this one cause quaternion tripped me up
-            spawnedItem.GetComponent<ItemPickup>().item = items[randomNum];
-            spawnedItems.Add(spawnedItem);
+            int randomNum;
+            GameObject spawnedItem = Instantiate(prefab, position, Quaternion.identity);
+            Item newItem = items[0];
+
+            do
+            {
+                randomNum = Random.Range(0, items.Length);
+                newItem = items[randomNum];
+            } while (spawnedItems.Contains(newItem));
+
+            spawnedItem.GetComponent<ItemPickup>().item = newItem;
+            spawnedItems.Add(newItem);
+            spawnedGameObjects.Add(spawnedItem);
         }
     }
 
     public void ClearSpawnedItems()
     {
         // destroys all the items that were spawned in for that round
-        foreach (GameObject item in spawnedItems)
+        foreach (GameObject item in spawnedGameObjects)
         {
             Destroy(item);
         }
 
         spawnedItems.Clear();
+        spawnedGameObjects.Clear();
     }
 }
