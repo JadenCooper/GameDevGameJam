@@ -46,11 +46,11 @@ public class Bullet : MonoBehaviour
             Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), hit.GetComponent<Collider2D>());
             return;
         }
-        //CharacterStats stats = hit.GetComponent<CharacterStats>();
-        //if (stats != null)
-        //{
-        //    stats.TakeDamage(damage);
-        //}
+        CharacterStats stats = hit.GetComponent<CharacterStats>();
+        if (stats != null)
+        {
+            stats.TakeDamage(damage);
+        }
         Destroy(gameObject);
     }
 }
