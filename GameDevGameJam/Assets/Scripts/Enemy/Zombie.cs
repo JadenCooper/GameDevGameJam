@@ -7,12 +7,11 @@ public class Zombie : MonoBehaviour
     public KnockBack knockback;
 
     private AudioSource audioSource;
-    // // Start is called before the first frame update
-    // void Start()
-    // {
-    //     audioSource = GetComponent<AudioSource>();
-    //     StartCoroutine(MoanTimer(Random.Range(3, 15)));
-    // }
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        StartCoroutine(MoanTimer(Random.Range(0.1f, 3f)));
+    }
 
     public void OnCollisionStay2D(Collision2D other) 
     {

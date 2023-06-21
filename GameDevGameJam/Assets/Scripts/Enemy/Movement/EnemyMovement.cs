@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    CharacterStats characterStats;
+    private CharacterStats characterStats;
 
     private Rigidbody2D rb2d;
 
     [SerializeField]
-    private float maxSpeed = 2, acceleration = 50, deacceleration = 100;
+    private float acceleration = 50, deacceleration = 100;
     [SerializeField]
     private float currentSpeed = 0;
     private Vector2 oldMovementInput;
@@ -24,17 +24,20 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float speed = characterStats.speed.GetValue();
-        if (MovementInput.magnitude > 0 && currentSpeed >= 0)
+        if (characterStats != null)
         {
-            oldMovementInput = MovementInput;
-            currentSpeed += acceleration * speed * Time.deltaTime;
+            float speed = characterStats.speed.GetValue();
+            if (MovementInput.magnitude > 0 && currentSpeed >= 0)
+            {
+                oldMovementInput = MovementInput;
+                currentSpeed += acceleration * speed * Time.deltaTime;
+            }
+            else
+            {
+                currentSpeed -= deacceleration * speed * Time.deltaTime;
+            }
+            currentSpeed = Mathf.Clamp(currentSpeed, 0, speed);
+            rb2d.velocity = oldMovementInput * currentSpeed;
         }
-        else
-        {
-            currentSpeed -= deacceleration * speed * Time.deltaTime;
-        }
-        currentSpeed = Mathf.Clamp(currentSpeed, 0, speed);
-        rb2d.velocity = oldMovementInput * currentSpeed;
     }
 }

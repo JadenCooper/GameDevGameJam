@@ -13,12 +13,19 @@ public class Bomber : MonoBehaviour
     [SerializeField]
     private Vector2[] fireDirections = new Vector2[4];
 
+    [SerializeField]
+    private float fuseTime = 0.2f;
+    
     public GameObject fireBall;
 
-    private float fuseTime = 0.2f;
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip clip;
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         characterStats = GetComponent<CharacterStats>();
     }
 
@@ -29,6 +36,7 @@ public class Bomber : MonoBehaviour
 
     public void Shrapnel() 
     {
+       
         int[] directions;
         GameObject sh = Instantiate(shrap);
 
@@ -37,7 +45,14 @@ public class Bomber : MonoBehaviour
 
         List<Transform> fireBallLocations = new List<Transform>();
 
-        for(int i=0;i < sh.transform.childCount; i++)
+        AudioSource newAudioSource = sh.AddComponent<AudioSource>();
+        newAudioSource.Stop();
+        newAudioSource.clip = clip;
+        newAudioSource.loop = false;
+        newAudioSource.Play();
+
+
+        for (int i=0;i < sh.transform.childCount; i++)
         {
             Transform child = sh.transform.GetChild(i);
             fireBallLocations.Add(child);
@@ -64,6 +79,8 @@ public class Bomber : MonoBehaviour
                     fireDirections[i]
                 );
         }
+
+        Destroy(sh, 2f);
     }
 
     IEnumerator Suicide()
@@ -72,5 +89,10 @@ public class Bomber : MonoBehaviour
 
         Shrapnel();
         Destroy(gameObject);
+    }
+
+    public void PlayWheelSounds()
+    {
+        audioSource.Play();
     }
 }

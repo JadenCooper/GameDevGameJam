@@ -27,15 +27,18 @@ public class EnemyAI : MonoBehaviour
     private Vector2 movementInput;
 
     //Inputs sent from the Enemy AI to the Enemy controller
-    public UnityEvent OnAttack;
+    public UnityEvent OnAttack, WalkSound;
     public UnityEvent<Vector2> OnMovementInput;
 
     bool following = false;
+
+    private Bomber bomber;
 
     private void Start()
     {
         // Detect the targets and obstacles
         InvokeRepeating("PerformDetection", 0f, detectionDelay);
+        bomber = GetComponent<Bomber>();
     }
 
     private void PerformDetection()
@@ -78,6 +81,8 @@ public class EnemyAI : MonoBehaviour
         OnMovementInput?.Invoke(movementInput);
     }
 
+    bool isPlayingWheelSound = false;
+
     private IEnumerator ChaseAndAttack()
     {
         if(aiData.currentTarget == null)
@@ -105,6 +110,11 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 movementInput = contextSolver.GetDirectionToMove(steeringBehaviours, aiData);
+                if (!isPlayingWheelSound)
+                {
+                    WalkSound?.Invoke();
+                    isPlayingWheelSound = true;
+                }
                 CheckSide();
                 yield return new WaitForSeconds(aiUpdateDelay);
                 StartCoroutine(ChaseAndAttack());
