@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6262196e880e6147a8aaa88399f6d8b, type: 3}
+  m_Name: PlatinumRing
+  m_EditorClassIdentifier: 
+  name: Platinum Ring
+  icon: {fileID: 1875577694, guid: 94c7c3a8eff28f3448e464cfc736e1e1, type: 3}
+  damageModifier: 10
+  speedModifier: 25
+  defenceModifier: 5
+  healthModifier: 25
+  weightModifier: 1
+  magSizeModifier: 2
+  spreadModifier: 0
+  bulletSpeedModifier: 10
+  fireRateModifier: -0.1
+  reloadSpeedModifier: -0.3
+  bulletWeightModifier: 1.5
+  rangeModifier: 10
+  modsNames:
+  - DMG
+  - SPD
+  - DEF
+  - HP
+  - Weight
+  - Mag Size
+  - Spread
+  - Bullet Speed
+  - Fire Rate
+  - Reload
+  - Bullet Weight
+  - Range
+  mods:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0

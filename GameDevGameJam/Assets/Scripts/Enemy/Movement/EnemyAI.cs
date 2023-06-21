@@ -21,13 +21,13 @@ public class EnemyAI : MonoBehaviour
     private float detectionDelay = 0.05f, aiUpdateDelay = 0.05f;
 
     [SerializeField]
-    private float attackDelay = 1f, attackDistance = 0.5f;
+    private float attackDelay = 1f, attackDistance = 1f;
 
     [SerializeField]
     private Vector2 movementInput;
 
     //Inputs sent from the Enemy AI to the Enemy controller
-    public UnityEvent OnAttackPressed;
+    public UnityEvent OnAttack;
     public UnityEvent<Vector2> OnMovementInput;
 
     bool following = false;
@@ -91,13 +91,13 @@ public class EnemyAI : MonoBehaviour
         {
             float distance = Vector2.Distance(aiData.currentTarget.position, transform.position);
 
-            if(distance < attackDistance)
+            if(distance <= attackDistance)
             {
                 CheckSide();
 
                 // Attack the player
                 Debug.Log("Attack");
-                OnAttackPressed?.Invoke();
+                OnAttack?.Invoke();
 
                 yield return new WaitForSeconds(attackDelay);
                 StartCoroutine(ChaseAndAttack());

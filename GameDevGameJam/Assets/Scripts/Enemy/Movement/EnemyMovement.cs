@@ -36,6 +36,5 @@ public class EnemyMovement : MonoBehaviour
         }
         currentSpeed = Mathf.Clamp(currentSpeed, 0, speed);
         rb2d.velocity = oldMovementInput * currentSpeed;
-
     }
 }
