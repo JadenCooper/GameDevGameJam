@@ -17,7 +17,7 @@ public class Zombie : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Debug.Log("On collision Zombie script");
+            other.gameObject.GetComponent<CharacterStats>().TakeDamage(gameObject.GetComponent<CharacterStats>().damage.GetValue());
             knockback.Knock(other.transform.position);
         }
     }
