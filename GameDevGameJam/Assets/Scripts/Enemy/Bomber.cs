@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Bomber : MonoBehaviour
 {
-   // [SerializeField]
-    //private List<GameObject> fireBallLocations = new List<GameObject>();
     CharacterStats characterStats;
 
     [SerializeField]
@@ -31,6 +29,7 @@ public class Bomber : MonoBehaviour
 
     public void Shrapnel() 
     {
+        int[] directions;
         GameObject sh = Instantiate(shrap);
 
         sh.transform.localPosition = Vector3.zero;
@@ -44,11 +43,17 @@ public class Bomber : MonoBehaviour
             fireBallLocations.Add(child);
         }
 
-        int[] directions = { 90, -90, 0, 180 };
+        if(fireDirections.Length == 8)
+        {
+            directions = new int[] { 90, -90, 0, 180, 130, 50, -50, -130 };
+        }
+        else
+        {
+            directions = new int[] { 90, -90, 0, 180 };
+        }
 
         for(int i = 0; i < directions.Length; i++)
         {
-            
             GameObject newFireBall = Instantiate(fireBall, fireBallLocations[i]);
 
             newFireBall.layer = gameObject.layer;
@@ -58,10 +63,7 @@ public class Bomber : MonoBehaviour
                     characterStats.range.GetValue(), 
                     fireDirections[i]
                 );
-
         }
-            
-        Debug.Log("boom");
     }
 
     IEnumerator Suicide()

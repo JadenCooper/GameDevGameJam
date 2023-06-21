@@ -561,7 +561,7 @@ MonoBehaviour:
   damage:
     baseValue: 15
   speed:
-    baseValue: 15
+    baseValue: 6.6
   defence:
     baseValue: 0
   weight:
