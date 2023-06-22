@@ -83,6 +83,10 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void Die()
     {
+        if (gameObject.tag == "Enemy")
+        {
+            ArenaManager.instance.enemies.Remove(gameObject);
+        }
         Destroy(gameObject);
     }
 }
