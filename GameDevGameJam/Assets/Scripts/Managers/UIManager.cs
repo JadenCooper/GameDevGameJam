@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
 
     private IEnumerator WarningCloser()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3);
         EscapeWarning.SetActive(false);
     }
 }

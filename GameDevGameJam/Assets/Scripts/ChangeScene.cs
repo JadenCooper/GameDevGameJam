@@ -10,4 +10,8 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("yoimhere 1");
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

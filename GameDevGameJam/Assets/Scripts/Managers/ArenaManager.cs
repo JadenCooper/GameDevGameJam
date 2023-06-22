@@ -88,7 +88,7 @@ public class ArenaManager : MonoBehaviour
                 if (enemiesSpawned == waves[currentWave].maxEnemies && enemies.Count() == 0 && !end)
                 {
                     waveIncrementSetter++;
-                    if (waveIncrementSetter == 1)
+                    if (waveIncrementSetter == 5)
                     {
                         // Five Waves Complete So Can Escape
                         waveIncrementSetter = 0; // Reset Couter
