@@ -100,6 +100,7 @@ public class ArenaManager : MonoBehaviour
 
                 if (end && hasShopped)
                 {
+                    uIManager.DeclinedEscape();
                     StartCoroutine(StartNewWave());
                 }
             }
