@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class KnockBack : MonoBehaviour
 {
     [SerializeField]
-    private float knockBackStrength = 5f, stunDuration = 0.2f, characterMass = 1f;
+    private float knockBackStrength = 5f, stunDuration = 0.2f;
 
     // Allows us to add events in the inspector for different objects if needed instead of hardcoding it
     public UnityEvent OnBegin, OnDone;
@@ -16,6 +16,10 @@ public class KnockBack : MonoBehaviour
         OnBegin?.Invoke();
 
         Rigidbody2D rb2d = person.GetComponent<Rigidbody2D>();
+        float characterMass = person.GetComponent<CharacterStats>().weight.GetValue();
+
+        knockBackStrength = Mathf.Max(knockBackStrength - characterMass, 4.5f);
+
         // Calculate the direction of the knockback
         Vector3 direction = (sendersPosition - transform.position).normalized;
         // Apply the knockback

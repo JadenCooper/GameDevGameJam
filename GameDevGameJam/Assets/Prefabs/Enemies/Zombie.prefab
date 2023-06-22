@@ -453,7 +453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38bd6a88a207bd46845ece5cf52798b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockback: {fileID: 8537962744366019968}
 --- !u!114 &8537962744366019968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,9 +465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3e9ba4e63070e41951ba1da6484014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockBackStrength: 8.1
+  knockBackStrength: 15
   stunDuration: 1
-  characterMass: 1
   OnBegin:
     m_PersistentCalls:
       m_Calls:
