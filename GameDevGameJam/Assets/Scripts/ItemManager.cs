@@ -44,6 +44,11 @@ public class ItemManager : MonoBehaviour
 
     private IEnumerator PlayItemPopup(Item item)
     {
+        foreach (GameObject t in modTextList)
+        {
+            Destroy(t);
+        }
+        modTextList.Clear();
         popUpParent.SetActive(true);
         Sprite sprite = item.icon;
         TMP_Text text = GameObject.Find("ItemText").GetComponent<TMP_Text>();

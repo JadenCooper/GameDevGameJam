@@ -17775,11 +17775,9 @@ MonoBehaviour:
     spawnInterval: 0.1
     maxEnemies: 1
   - enemies:
-    - {fileID: 8820457692708345508, guid: e138bb8050da1a54c95a3029b8f9e637, type: 3}
-    - {fileID: 7981681831114306268, guid: 7a93b3e7039a9d845b8cb5bff7f3ef53, type: 3}
-    - {fileID: 3198684236558349781, guid: 880ffb1275d9ef74e8c3536488df1135, type: 3}
+    - {fileID: 8537962744366019977, guid: ace2b8a873cd71445807cde0404e6161, type: 3}
     spawnInterval: 2.5
-    maxEnemies: 5
+    maxEnemies: 1
   - enemies:
     - {fileID: 8820457692708345508, guid: e138bb8050da1a54c95a3029b8f9e637, type: 3}
     - {fileID: 7981681831114306268, guid: 7a93b3e7039a9d845b8cb5bff7f3ef53, type: 3}

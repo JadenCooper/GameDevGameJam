@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShopEntrance : MonoBehaviour
 {
     public bool inShop = false;
+
     public ShopManager shop;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,8 +16,7 @@ public class ShopEntrance : MonoBehaviour
             if (!ArenaManager.instance.hasShopped && !inShop)
             {
                 ArenaManager.instance.hasShopped = true;
-                shop.CloseGate();
-                AudioManager.instance.DoorClose();
+                StartCoroutine(CloseDoor());
             }
         }
     }
@@ -31,8 +31,9 @@ public class ShopEntrance : MonoBehaviour
 
     private IEnumerator CloseDoor()
     {
-        
+        AudioManager.instance.DoorClose();
         yield return new WaitForSeconds(5f);
+        shop.CloseGate();
         
     }
 
@@ -40,7 +41,6 @@ public class ShopEntrance : MonoBehaviour
     {
         shop.OpenGate();
         AudioManager.instance.DoorOpen();
-        yield return new WaitForSeconds(5f);
-        
+        yield return new WaitForSeconds(3f);        
     }
 }
