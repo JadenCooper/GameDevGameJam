@@ -20,8 +20,11 @@ public class KnockBack : MonoBehaviour
         // Calculate the direction of the knockback
         Vector3 direction = (transform.position - sendersPosition).normalized;
         // Apply the knockback
-        rb2d.AddForce(((characterMass - knockBackStrength) * direction), ForceMode2D.Impulse);
-        Debug.Log("Knocked");
+        Debug.Log(person.name);
+        Vector2 knockbackForce = (characterMass - 1f) * knockBackStrength * direction;
+        Debug.Log(knockbackForce);
+        rb2d.AddForce(knockbackForce, ForceMode2D.Impulse);
+        Debug.Log((characterMass - knockBackStrength) * direction);
         StartCoroutine(Reset(rb2d));
     }
 
