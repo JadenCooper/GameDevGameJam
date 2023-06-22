@@ -376,11 +376,23 @@ MonoBehaviour:
   detectionDelay: 0.05
   aiUpdateDelay: 0.05
   attackDelay: 0.5
-  attackDistance: 1.05
+  attackDistance: 1.45
   movementInput: {x: 0, y: 0}
   OnAttack:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8537962744366019969}
+        m_TargetAssemblyTypeName: Zombie, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   WalkSound:
     m_PersistentCalls:
       m_Calls: []
@@ -454,8 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3e9ba4e63070e41951ba1da6484014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2D: {fileID: 0}
-  knockBackStrength: 5
+  knockBackStrength: 15
   stunDuration: 1
   characterMass: 1
   OnBegin:

@@ -11,7 +11,8 @@ public class KnockBack : MonoBehaviour
     // Allows us to add events in the inspector for different objects if needed instead of hardcoding it
     public UnityEvent OnBegin, OnDone;
 
-    public void Knock(Vector3 sendersPosition, GameObject person) {
+    public void Knock(Vector3 sendersPosition, GameObject person)
+    {
         StopAllCoroutines();
         OnBegin?.Invoke();
 
@@ -20,13 +21,18 @@ public class KnockBack : MonoBehaviour
         Vector3 direction = (transform.position - sendersPosition).normalized;
         // Apply the knockback
         rb2d.AddForce(((characterMass - knockBackStrength) * direction), ForceMode2D.Impulse);
+        Debug.Log("Knocked");
         StartCoroutine(Reset(rb2d));
     }
 
     // Stop the knockback and reset the velocity
-    private IEnumerator Reset(Rigidbody2D person) {
+    private IEnumerator Reset(Rigidbody2D person)
+    {
         yield return new WaitForSeconds(stunDuration);
-        person.velocity = Vector2.zero; 
+        Debug.Log("Reset");
+        person.velocity = Vector2.zero;
         OnDone?.Invoke();
     }
 }
+
+ 
