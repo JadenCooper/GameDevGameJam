@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6262196e880e6147a8aaa88399f6d8b, type: 3}
-  m_Name: RustySilverRing
+  m_Name: BloodyBandage
   m_EditorClassIdentifier: 
-  name: Rusty Silver Ring
-  icon: {fileID: -1870863349, guid: 94c7c3a8eff28f3448e464cfc736e1e1, type: 3}
+  name: Bloody Bandage
+  icon: {fileID: 2018581547, guid: 94c7c3a8eff28f3448e464cfc736e1e1, type: 3}
   cost: 100
   damageModifier: 0
   speedModifier: 0
-  defenceModifier: 2
-  healthModifier: 10
-  weightModifier: 2
+  defenceModifier: 0
+  healthModifier: 25
+  weightModifier: 0
   magSizeModifier: 0
   spreadModifier: 0
   bulletSpeedModifier: 0

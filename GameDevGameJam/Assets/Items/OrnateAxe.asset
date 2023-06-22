@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6262196e880e6147a8aaa88399f6d8b, type: 3}
-  m_Name: TestItem
+  m_Name: OrnateAxe
   m_EditorClassIdentifier: 
-  name: New Item
-  icon: {fileID: 0}
-  damageModifier: 0
-  speedModifier: 0
+  name: Ornate Axe
+  icon: {fileID: -1644525207, guid: 94c7c3a8eff28f3448e464cfc736e1e1, type: 3}
+  cost: 1000
+  damageModifier: 50
+  speedModifier: -10
   defenceModifier: 0
   healthModifier: 0
-  weightModifier: 0
+  weightModifier: 1
   magSizeModifier: 0
   spreadModifier: 0
   bulletSpeedModifier: 0
-  fireRateModifier: 0
-  reloadSpeedModifier: 0
+  fireRateModifier: -0.2
+  reloadSpeedModifier: -0.2
   bulletWeightModifier: 0
   rangeModifier: 0
   modsNames:
