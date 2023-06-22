@@ -39,14 +39,14 @@ public class ArenaManager : MonoBehaviour
     [SerializeField] private GameObject spawnPointParent;
     [SerializeField] private List<Transform> spawnPoints = new List<Transform>();
 
-    [HideInInspector] public List<GameObject> enemies = new List<GameObject>();
+    public List<GameObject> enemies = new List<GameObject>();
 
     public Wave[] waves;
     public float waveInterval = 5f;
 
     private int currentWave = 0;
     private float lastSpwanTime;
-    private int enemiesSpawned = 0;
+    [SerializeField] private int enemiesSpawned = 0;
     public bool end = false;
     [HideInInspector] public bool hasShopped = true;
 
@@ -67,6 +67,7 @@ public class ArenaManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(end);
         if (currentWave < waves.Count())
         {
             float timeInterval = Time.time - lastSpwanTime;
@@ -75,19 +76,21 @@ public class ArenaManager : MonoBehaviour
             {
                 GameObject newEnemy = null;
                 lastSpwanTime = Time.time;
-                if (enemiesSpawned <= waves[currentWave].maxEnemies)
+                if (enemiesSpawned < waves[currentWave].maxEnemies)
                 {
                     newEnemy = Instantiate((waves[currentWave].enemies[UnityEngine.Random.Range(0, waves[currentWave].enemies.Count())]));
                     newEnemy.transform.position = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Count())].transform.position;
                     enemies.Add(newEnemy);
                     enemiesSpawned++;
-                    if (enemiesSpawned == waves[currentWave].maxEnemies)
-                    {
+                }
+
+                if (enemiesSpawned == waves[currentWave].maxEnemies && enemies.Count() == 0 && !end)
+                {
                         end = true;
                         hasShopped = false;
-                    }
                 }
-                else if (end && hasShopped)
+
+                if (end && hasShopped)
                 {
                     StartCoroutine(StartNewWave());
                 }

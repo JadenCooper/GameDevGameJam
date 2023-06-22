@@ -10,6 +10,7 @@ public class ShopManager : MonoBehaviour
     private Dictionary<Vector3Int, TileBase> originalTiles;
     public ShopItems itemManager;
     public int gameStage;
+    public bool isOpen = false;
 
     // https://www.youtube.com/watch?v=1Sah23KPEfU&ab_channel=Velvary
     void Start()
@@ -20,6 +21,7 @@ public class ShopManager : MonoBehaviour
 
     public void OpenGate()
     {
+        isOpen = true;
         Vector3Int[] tilePositions =
         {
             new Vector3Int(10, 4, 0),
@@ -93,6 +95,7 @@ public class ShopManager : MonoBehaviour
 
     public void CloseGate()
     {
+        isOpen = false;
         foreach (var tiles in originalTiles)
         {
             Vector3Int position = tiles.Key;
