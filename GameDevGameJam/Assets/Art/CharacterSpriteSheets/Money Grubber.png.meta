@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a66f7f67717a45b42832e906403f9d29
+guid: 62e4228c9dbf9cb4fb72126d51556a24
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,12 +105,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ghost Shopkeeper_0
+      name: Money Grubber_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 1
         y: 0
-        width: 18
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcba3ba080e375479b5992fe0ebf973
+      internalID: -1729495031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Money Grubber_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 22
         height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -119,19 +140,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d4378840a3695e4fbea4ad89277a8d6
-      internalID: -441979537
+      spriteID: d584b4870ddd5234b9b39c11adda92e6
+      internalID: 1756303788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghost Shopkeeper_1
+      name: Money Grubber_2
       rect:
         serializedVersion: 2
-        x: 27
+        x: 49
         y: 0
-        width: 18
+        width: 22
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -140,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edff2c27fa5350f49a32e5e935380cc6
-      internalID: 1648722335
+      spriteID: c82c841cfc4508d4c9f42cbcc9e895bd
+      internalID: 833191091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghost Shopkeeper_2
+      name: Money Grubber_3
       rect:
         serializedVersion: 2
-        x: 51
+        x: 73
         y: 0
-        width: 18
-        height: 23
+        width: 22
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,29 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a24a0a84a18fdde4099b7a4712773ebd
-      internalID: 1356032649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ghost Shopkeeper_3
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 0
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfc8d25e875d2824b853bc230508b99b
-      internalID: 374938112
+      spriteID: abb0281a81b716440936441bc9840960
+      internalID: -399749418
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ghost Shopkeeper_0: -441979537
-      Ghost Shopkeeper_1: 1648722335
-      Ghost Shopkeeper_2: 1356032649
-      Ghost Shopkeeper_3: 374938112
+      Money Grubber_0: -1729495031
+      Money Grubber_1: 1756303788
+      Money Grubber_2: 833191091
+      Money Grubber_3: -399749418
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
