@@ -32,6 +32,7 @@ public class ItemManager : MonoBehaviour
     public GameObject modsText;
     public GameObject modsParent;
     public GameObject spriteParent;
+
     private List<GameObject> modTextList = new List<GameObject>();
     public int coins = 0;
 
@@ -76,5 +77,9 @@ public class ItemManager : MonoBehaviour
     public void AddCoins(int value)
     {
         coins += value;
+        
+        TMP_Text moneyText = GameObject.Find("MoneyCount").GetComponent<TMP_Text>();
+        string moneyCounterText = "Coins: " + coins;
+        moneyText.text = moneyCounterText;
     }
 }
