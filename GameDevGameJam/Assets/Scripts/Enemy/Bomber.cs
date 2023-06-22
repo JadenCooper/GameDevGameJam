@@ -40,7 +40,6 @@ public class Bomber : MonoBehaviour
 
     public void Shrapnel() 
     {
-       
         int[] directions;
         GameObject sh = Instantiate(shrap);
 

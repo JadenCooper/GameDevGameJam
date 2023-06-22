@@ -102,8 +102,8 @@ public class EnemyAI : MonoBehaviour
 
                 // Attack the player
                 Debug.Log("Attack");
-                OnAttack?.Invoke();
                 movementInput = Vector2.zero;
+                OnAttack?.Invoke();
 
                 yield return new WaitForSeconds(attackDelay);
                 StartCoroutine(ChaseAndAttack());

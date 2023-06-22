@@ -13,18 +13,14 @@ public class KnockBack : MonoBehaviour
 
     public void Knock(Vector3 sendersPosition, GameObject person)
     {
-        StopAllCoroutines();
         OnBegin?.Invoke();
 
         Rigidbody2D rb2d = person.GetComponent<Rigidbody2D>();
         // Calculate the direction of the knockback
-        Vector3 direction = (transform.position - sendersPosition).normalized;
+        Vector3 direction = (sendersPosition - transform.position).normalized;
         // Apply the knockback
-        Debug.Log(person.name);
-        Vector2 knockbackForce = (characterMass - 1f) * knockBackStrength * direction;
-        Debug.Log(knockbackForce);
+        Vector2 knockbackForce = direction * knockBackStrength;
         rb2d.AddForce(knockbackForce, ForceMode2D.Impulse);
-        Debug.Log((characterMass - knockBackStrength) * direction);
         StartCoroutine(Reset(rb2d));
     }
 
@@ -37,5 +33,3 @@ public class KnockBack : MonoBehaviour
         OnDone?.Invoke();
     }
 }
-
- 

@@ -375,8 +375,8 @@ MonoBehaviour:
   contextSolver: {fileID: 8537962745228104990}
   detectionDelay: 0.05
   aiUpdateDelay: 0.05
-  attackDelay: 0.5
-  attackDistance: 1.45
+  attackDelay: 1
+  attackDistance: 1.5
   movementInput: {x: 0, y: 0}
   OnAttack:
     m_PersistentCalls:
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3e9ba4e63070e41951ba1da6484014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockBackStrength: 15
+  knockBackStrength: 8.1
   stunDuration: 1
   characterMass: 1
   OnBegin:
@@ -509,7 +509,7 @@ Animator:
   m_GameObject: {fileID: 8537962744366019977}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fc2b815c9070993428fa34aae2ab5cc7, type: 2}
+  m_Controller: {fileID: 9100000, guid: bb025d01832654f4e8600f94522d97b1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -633,7 +633,7 @@ MonoBehaviour:
   damage:
     baseValue: 20
   speed:
-    baseValue: 5
+    baseValue: 4
   defence:
     baseValue: 0
   weight:
