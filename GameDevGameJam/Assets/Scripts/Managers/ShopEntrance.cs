@@ -15,7 +15,8 @@ public class ShopEntrance : MonoBehaviour
             if (!ArenaManager.instance.hasShopped && !inShop)
             {
                 ArenaManager.instance.hasShopped = true;
-                StartCoroutine(CloseDoor());
+                shop.CloseGate();
+                AudioManager.instance.DoorClose();
             }
         }
     }
@@ -30,16 +31,13 @@ public class ShopEntrance : MonoBehaviour
 
     private IEnumerator CloseDoor()
     {
-        shop.isOpen = false;
-        shop.CloseGate();
-        AudioManager.instance.DoorClose();
+        
         yield return new WaitForSeconds(5f);
         
     }
 
     private IEnumerator OpenDoor()
     {
-        shop.isOpen = true;
         shop.OpenGate();
         AudioManager.instance.DoorOpen();
         yield return new WaitForSeconds(5f);

@@ -100,9 +100,11 @@ public class ArenaManager : MonoBehaviour
 
     public IEnumerator StartNewWave()
     {
-        end = false;
-        yield return new WaitForSeconds(waveInterval);
+        end = false; 
         currentWave++;
         enemiesSpawned = 0;
+        yield return new WaitForSeconds(waveInterval);
+       
+        
     }
 }
