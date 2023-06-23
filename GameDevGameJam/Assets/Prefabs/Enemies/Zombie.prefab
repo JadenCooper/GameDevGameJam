@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 8537962744366019975}
   - component: {fileID: 66057681826215403}
   - component: {fileID: 733836406222300525}
+  - component: {fileID: 4356197360581287219}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -381,8 +382,8 @@ MonoBehaviour:
   OnAttack:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8537962744366019969}
-        m_TargetAssemblyTypeName: Zombie, Assembly-CSharp
+      - m_Target: {fileID: 4356197360581287219}
+        m_TargetAssemblyTypeName: EnemyMelee, Assembly-CSharp
         m_MethodName: Attack
         m_Mode: 1
         m_Arguments:
@@ -453,8 +454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38bd6a88a207bd46845ece5cf52798b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockback: {fileID: 8537962744366019968}
-  attackDistance: 2
 --- !u!114 &8537962744366019968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,6 +684,20 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4356197360581287219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537962744366019977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cdafb779ed33bf41b6e03dcde7fb52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockback: {fileID: 8537962744366019968}
+  attackDistance: 2
 --- !u!1 &8537962744417895000
 GameObject:
   m_ObjectHideFlags: 0
