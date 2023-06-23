@@ -347,7 +347,7 @@ MonoBehaviour:
   detectionDelay: 0.05
   aiUpdateDelay: 0.05
   attackDelay: 1
-  attackDistance: 5
+  attackDistance: 2
   movementInput: {x: 0, y: 0}
   OnAttack:
     m_PersistentCalls:
@@ -654,7 +654,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockBackStrength: 5
   stunDuration: 0.2
-  characterMass: 1
   OnBegin:
     m_PersistentCalls:
       m_Calls: []

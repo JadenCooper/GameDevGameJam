@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 955991915604274225, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: chanceToSpawn
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5157126595842500072, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -89,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5157126595842500087, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
       propertyPath: m_Name
-      value: Boss
+      value: Boss Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a677c245d771238429bc3d603ecbf36b, type: 3}

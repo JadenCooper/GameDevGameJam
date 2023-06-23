@@ -192,8 +192,28 @@ PrefabInstance:
       propertyPath: damage.baseValue
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5868566058407507163, guid: bd369907864ab5c498a2edf3c3fb1a62, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd369907864ab5c498a2edf3c3fb1a62, type: 3}
+--- !u!1 &5752672727124379620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5455369363834274244, guid: bd369907864ab5c498a2edf3c3fb1a62, type: 3}
+  m_PrefabInstance: {fileID: 315468395450959392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3088798612850612405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5752672727124379620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5f3ce09e5d28c4eafb5cc09aac3e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceToSpawn: 25
+  coinPrefab: {fileID: 6554058333154123875, guid: c12e8b6fa469766499a722526f031141, type: 3}
 --- !u!4 &5752672727124379628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5455369363834274252, guid: bd369907864ab5c498a2edf3c3fb1a62, type: 3}

@@ -35,25 +35,28 @@ public class CharacterStats : MonoBehaviour
 
     public void Start()
     {
-        foreach (Item item in ItemManager.instance.items)
+        if(gameObject.tag != "Enemy")
         {
-            damage.AddModifier(item.damageModifier);
-            speed.AddModifier(item.speedModifier);
-            defence.AddModifier(item.defenceModifier);
-            if (item.healthModifier > 0)
+            foreach (Item item in ItemManager.instance.items)
             {
-                maxHealth += item.healthModifier;
-                currentHealth += item.healthModifier;
-                ChangeHealth?.Invoke(currentHealth);
+                damage.AddModifier(item.damageModifier);
+                speed.AddModifier(item.speedModifier);
+                defence.AddModifier(item.defenceModifier);
+                if (item.healthModifier > 0)
+                {
+                    maxHealth += item.healthModifier;
+                    currentHealth += item.healthModifier;
+                    ChangeHealth?.Invoke(currentHealth);
+                }
+                weight.AddModifier(item.weightModifier);
+                magSize.AddModifier(item.magSizeModifier);
+                spread.AddModifier(item.spreadModifier);
+                bulletSpeed.AddModifier(item.bulletSpeedModifier);
+                fireRate.AddModifier(item.fireRateModifier);
+                reloadSpeed.AddModifier(item.reloadSpeedModifier);
+                bulletWeight.AddModifier(item.bulletWeightModifier);
+                range.AddModifier(item.rangeModifier);
             }
-            weight.AddModifier(item.weightModifier);
-            magSize.AddModifier(item.magSizeModifier);
-            spread.AddModifier(item.spreadModifier);
-            bulletSpeed.AddModifier(item.bulletSpeedModifier);
-            fireRate.AddModifier(item.fireRateModifier);
-            reloadSpeed.AddModifier(item.reloadSpeedModifier);
-            bulletWeight.AddModifier(item.bulletWeightModifier);
-            range.AddModifier(item.rangeModifier);
         }
     }
 

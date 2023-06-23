@@ -16,7 +16,7 @@ public class TargetDetector : Detector
 
     private List<Transform> colliders;
 
-   public override void Detect(AIData aiData)
+    public override void Detect(AIData aiData)
     {
         //Find out if player is near
         Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, detectionRange, playerLayerMask);

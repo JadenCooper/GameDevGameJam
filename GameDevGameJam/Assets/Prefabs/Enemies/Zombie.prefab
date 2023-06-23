@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  enemyColliderSize: 1.1
+  enemyColliderSize: 2
   showGizmos: 1
 --- !u!1 &8537962744366019977
 GameObject:
@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 66057681826215403}
   - component: {fileID: 733836406222300525}
   - component: {fileID: 4356197360581287219}
+  - component: {fileID: 8337043149105902407}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -683,7 +684,19 @@ MonoBehaviour:
         m_CallState: 2
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8337043149105902407}
+        m_TargetAssemblyTypeName: CoinDrop, Assembly-CSharp
+        m_MethodName: DropMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4356197360581287219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,6 +711,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockback: {fileID: 8537962744366019968}
   attackDistance: 2
+--- !u!114 &8337043149105902407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537962744366019977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5f3ce09e5d28c4eafb5cc09aac3e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceToSpawn: 10
+  coinPrefab: {fileID: 6554058333154123875, guid: c12e8b6fa469766499a722526f031141, type: 3}
 --- !u!1 &8537962744417895000
 GameObject:
   m_ObjectHideFlags: 0
