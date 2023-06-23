@@ -16,15 +16,15 @@ public class ShopItems : MonoBehaviour
     {
         Item[] items;
 
-        if (gameStage >= 1 && gameStage <= 5) // i'll be grabbing that round int that we're currently in to decide which set of items to spawn in for power balancing
+        if (gameStage >= 0 && gameStage <= 4) 
         {
             items = earlyGameItems;
         }
-        else if (gameStage >= 6 && gameStage <= 10)
+        else if (gameStage >= 5 && gameStage <= 8)
         {
             items = midGameItems;
         }
-        else if (gameStage >= 11 && gameStage <= 13)
+        else if (gameStage >= 9 && gameStage <= 10)
         {
             items = lateGameItems;
         }
@@ -32,17 +32,17 @@ public class ShopItems : MonoBehaviour
         {
             items = null;
         }
-
         if (items != null && items.Length > 0)
         {
             int randomNum;
             GameObject spawnedItem = Instantiate(prefab, position, Quaternion.identity);
-            Item newItem = items[0];
+            Item newItem = items[Random.Range(0, items.Length)];
 
             do
             {
                 randomNum = Random.Range(0, items.Length);
                 newItem = items[randomNum];
+                
             } while (spawnedItems.Contains(newItem));
 
             spawnedItem.GetComponent<ItemPickup>().item = newItem;
@@ -56,10 +56,10 @@ public class ShopItems : MonoBehaviour
         // destroys all the items that were spawned in for that round
         foreach (GameObject item in spawnedGameObjects)
         {
+            spawnedItems.Remove(item.GetComponent<ItemPickup>().item);
             Destroy(item);
         }
 
-        spawnedItems.Clear();
         spawnedGameObjects.Clear();
     }
 }

@@ -44,7 +44,7 @@ public class ArenaManager : MonoBehaviour
     public Wave[] waves;
     public float waveInterval = 5f;
     public UIManager uIManager;
-    private int currentWave = 0;
+    public int currentWave = 0;
     private int waveIncrementSetter = 0;
     private float lastSpwanTime;
     [SerializeField] private int enemiesSpawned = 0;

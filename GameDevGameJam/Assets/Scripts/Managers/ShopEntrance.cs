@@ -23,9 +23,26 @@ public class ShopEntrance : MonoBehaviour
 
     private void Update()
     {
-        if (ArenaManager.instance.end && !shop.isOpen)
-        {
-            StartCoroutine(OpenDoor());
+        if (!shop.isOpen && ArenaManager.instance.end)
+        {  
+            switch (ArenaManager.instance.currentWave)
+            {
+                case 2:
+                    StartCoroutine(OpenDoor());
+                break;
+                case 4:
+                    StartCoroutine(OpenDoor());
+                break;
+                case 6:
+                    StartCoroutine(OpenDoor());
+                break;
+                case 8:
+                    StartCoroutine(OpenDoor());
+                break;
+                default:
+                ArenaManager.instance.hasShopped = true;
+                break;
+            }
         }
     }
 
