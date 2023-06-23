@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public KnockBack knockback;
-
     private AudioSource audioSource;
     public float attackDistance = 2;
     void Start()

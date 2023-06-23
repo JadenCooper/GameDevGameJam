@@ -467,9 +467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3e9ba4e63070e41951ba1da6484014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockBackStrength: 8.1
+  knockBackStrength: 15
   stunDuration: 1
-  characterMass: 1
   OnBegin:
     m_PersistentCalls:
       m_Calls:

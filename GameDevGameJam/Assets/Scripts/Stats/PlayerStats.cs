@@ -42,7 +42,7 @@ public class PlayerStats : CharacterStats
     public override void Die()
     {
         //Add player Death Stuff
-
-        base.Die();
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        // base.Die();
     }
 }
