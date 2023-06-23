@@ -17342,7 +17342,7 @@ MonoBehaviour:
   enemies: []
   waves:
   - enemies:
-    - {fileID: 5157126595842500087, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+    - {fileID: 8537962744366019977, guid: ace2b8a873cd71445807cde0404e6161, type: 3}
     spawnInterval: 0.1
     maxEnemies: 1
   - enemies:
