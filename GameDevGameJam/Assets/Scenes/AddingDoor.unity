@@ -17128,13 +17128,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   earlyGameItems:
-  - {fileID: 11400000, guid: 522613e19d7bde94ba5abe7f8bf4c9d8, type: 2}
+  - {fileID: 11400000, guid: e3917840f1d6c6d42bd3b17f9fec6136, type: 2}
   - {fileID: 11400000, guid: a29eb78fca9c19c41b494913256ffaaf, type: 2}
-  - {fileID: 11400000, guid: 069e001dab456d84a85814908c678ffe, type: 2}
   - {fileID: 11400000, guid: 94752cd95db456e4b8d36f321009e8e5, type: 2}
   - {fileID: 11400000, guid: 2f3eaf27d1b9fa04d896e8f1f2fad2dc, type: 2}
-  midGameItems: []
-  lateGameItems: []
+  - {fileID: 11400000, guid: add09870bc7bf584d93e31e15f7fe02d, type: 2}
+  - {fileID: 11400000, guid: 522379807861cb24284f6da3599a26da, type: 2}
+  - {fileID: 11400000, guid: dc9b4dfea6882b648bf38bbb9b95626a, type: 2}
+  - {fileID: 11400000, guid: 4552305d37be098428315aa991b42e38, type: 2}
+  - {fileID: 11400000, guid: 60f4eac09f36d994b91c72a77e547b90, type: 2}
+  midGameItems:
+  - {fileID: 11400000, guid: b426ff819e99bf94dbdec7ee5d95c00d, type: 2}
+  - {fileID: 11400000, guid: 4b4b0ef99261879419ce07730a1d0c99, type: 2}
+  - {fileID: 11400000, guid: 338bac7b35a66f249a8c745adcae6dac, type: 2}
+  - {fileID: 11400000, guid: 1e89dbf76359aa841a1615a80e0df112, type: 2}
+  - {fileID: 11400000, guid: 64bfc371f845c014d9431596416dcf23, type: 2}
+  - {fileID: 11400000, guid: aa37cd9c68e58c34f92eddfe2cff18b8, type: 2}
+  lateGameItems:
+  - {fileID: 11400000, guid: 522613e19d7bde94ba5abe7f8bf4c9d8, type: 2}
+  - {fileID: 11400000, guid: abfef91620101f44398a858499b4e516, type: 2}
+  - {fileID: 11400000, guid: da67e73198834744b874e7bcd3436ad6, type: 2}
+  - {fileID: 11400000, guid: 069e001dab456d84a85814908c678ffe, type: 2}
+  - {fileID: 11400000, guid: 9fb000c551c1552429f4b73b437990e6, type: 2}
   prefab: {fileID: 6702236098404685256, guid: b6b212ba7237a294fadec5f425e91f49, type: 3}
 --- !u!1001 &701597975
 PrefabInstance:

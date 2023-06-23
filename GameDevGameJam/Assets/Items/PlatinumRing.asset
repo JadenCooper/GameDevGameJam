@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Platinum Ring
   icon: {fileID: 1875577694, guid: 94c7c3a8eff28f3448e464cfc736e1e1, type: 3}
+  cost: 500
   damageModifier: 10
   speedModifier: 25
   defenceModifier: 5
