@@ -43,8 +43,9 @@ public class ArenaManager : MonoBehaviour
 
     public Wave[] waves;
     public float waveInterval = 5f;
-
+    public UIManager uIManager;
     private int currentWave = 0;
+    private int waveIncrementSetter = 0;
     private float lastSpwanTime;
     [SerializeField] private int enemiesSpawned = 0;
     public bool end = false;
@@ -86,12 +87,20 @@ public class ArenaManager : MonoBehaviour
 
                 if (enemiesSpawned == waves[currentWave].maxEnemies && enemies.Count() == 0 && !end)
                 {
-                        end = true;
-                        hasShopped = false;
+                    waveIncrementSetter++;
+                    if (waveIncrementSetter == 5)
+                    {
+                        // Five Waves Complete So Can Escape
+                        waveIncrementSetter = 0; // Reset Couter
+                        uIManager.EscapeTheTomb(currentWave);
+                    }
+                    end = true;
+                    hasShopped = false;
                 }
 
                 if (end && hasShopped)
                 {
+                    uIManager.DeclinedEscape();
                     StartCoroutine(StartNewWave());
                 }
             }
