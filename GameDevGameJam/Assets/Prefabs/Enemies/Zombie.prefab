@@ -453,6 +453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38bd6a88a207bd46845ece5cf52798b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockback: {fileID: 8537962744366019968}
+  attackDistance: 2
 --- !u!114 &8537962744366019968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,7 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3146add84450f4db77b6f654fd1d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 10
+  detectionRange: 14
   obstaclesLayerMask:
     serializedVersion: 2
     m_Bits: 200

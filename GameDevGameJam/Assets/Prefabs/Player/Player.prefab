@@ -1590,7 +1590,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 32
   m_TargetDisplay: 0
 --- !u!114 &3133039948596496388
 MonoBehaviour:
@@ -3454,9 +3454,9 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   damage:
-    baseValue: 5
+    baseValue: 10
   speed:
-    baseValue: 175
+    baseValue: 200
   defence:
     baseValue: 0
   weight:
