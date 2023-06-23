@@ -20,11 +20,11 @@ public class ShopItems : MonoBehaviour
         {
             items = earlyGameItems;
         }
-        else if (gameStage >= 5 && gameStage <= 8)
+        else if (gameStage >= 5 && gameStage <= 6)
         {
             items = midGameItems;
         }
-        else if (gameStage >= 9 && gameStage <= 10)
+        else if (gameStage >= 7 && gameStage <= 10)
         {
             items = lateGameItems;
         }

@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 5157126595842500074}
   - component: {fileID: 5157126595842500075}
   - component: {fileID: 5157126595842500068}
+  - component: {fileID: 955991915604274225}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -285,7 +286,7 @@ MonoBehaviour:
   detectionDelay: 0.05
   aiUpdateDelay: 0.05
   attackDelay: 2
-  attackDistance: 2.7
+  attackDistance: 3
   movementInput: {x: 0, y: 0}
   OnAttack:
     m_PersistentCalls:
@@ -414,7 +415,19 @@ MonoBehaviour:
       m_Calls: []
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 955991915604274225}
+        m_TargetAssemblyTypeName: CoinDrop, Assembly-CSharp
+        m_MethodName: DropMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &5157126595842500080
 Animator:
   serializedVersion: 5
@@ -448,6 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46895baf8e9329a409aa235d79750f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   spawnTime: 3
   spawnPoints:
   - {fileID: 5157126596334350613}
@@ -475,6 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockback: {fileID: 5157126595842500082}
+  attackDistance: 3
 --- !u!82 &5157126595842500068
 AudioSource:
   m_ObjectHideFlags: 0
@@ -571,6 +586,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &955991915604274225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157126595842500087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5f3ce09e5d28c4eafb5cc09aac3e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceToSpawn: 99
+  coinPrefab: {fileID: 6554058333154123875, guid: c12e8b6fa469766499a722526f031141, type: 3}
 --- !u!1 &5157126595854378814
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,7 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  enemyColliderSize: 1.1
+  enemyColliderSize: 3
   showGizmos: 1
 --- !u!1 &5157126596992163577
 GameObject:
