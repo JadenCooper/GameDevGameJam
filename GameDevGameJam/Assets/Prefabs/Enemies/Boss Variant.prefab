@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2880869147236776688
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 955991915604274225, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: chanceToSpawn
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500072, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500072, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8213813
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500072, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500073, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500073, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.3838406
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500073, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.933709
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500073, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500073, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500073, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500073, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500073, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500073, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500073, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500073, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500074, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: spawnTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500081, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: maxHealth
+      value: 4000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500081, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: speed.baseValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500081, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: damage.baseValue
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500081, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: weight.baseValue
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500081, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: defence.baseValue
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157126595842500087, guid: a677c245d771238429bc3d603ecbf36b, type: 3}
+      propertyPath: m_Name
+      value: Boss Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a677c245d771238429bc3d603ecbf36b, type: 3}

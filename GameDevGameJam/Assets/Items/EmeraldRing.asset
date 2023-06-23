@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Emerald Ring
   icon: {fileID: -875168644, guid: 94c7c3a8eff28f3448e464cfc736e1e1, type: 3}
+  cost: 1000
   damageModifier: 15
   speedModifier: 10
   defenceModifier: 3
@@ -40,15 +41,15 @@ MonoBehaviour:
   - Bullet Weight
   - Range
   mods:
+  - 15
+  - 10
+  - 3
+  - 75
   - 0
+  - 10
   - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 10
+  - -0.3
+  - -0.5
+  - 2
+  - 35

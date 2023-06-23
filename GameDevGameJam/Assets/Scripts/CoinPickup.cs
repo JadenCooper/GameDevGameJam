@@ -23,7 +23,7 @@ public class CoinPickup : Interactable
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = bigCoinPile;
         }
-        
+
     }
 
     public override void Interact()

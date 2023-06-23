@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3146add84450f4db77b6f654fd1d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 12
+  detectionRange: 14
   obstaclesLayerMask:
     serializedVersion: 2
     m_Bits: 200
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  enemyColliderSize: 0.6
+  enemyColliderSize: 1.5
   showGizmos: 1
 --- !u!1 &490959282429606889
 GameObject:
@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 490959283001111106}
   - component: {fileID: 490959283001111107}
   - component: {fileID: 8962548117721188848}
+  - component: {fileID: 7412962706852856692}
   m_Layer: 0
   m_Name: Bomber
   m_TagString: Enemy
@@ -550,6 +551,7 @@ MonoBehaviour:
   fuseTime: 0.2
   fireBall: {fileID: 3514368902704956732, guid: 51051ae6a69a4c74085b497120d285f2, type: 3}
   clip: {fileID: 8300000, guid: 871afb33bacbb0b419b075c6d46e5190, type: 3}
+  player: {fileID: 0}
 --- !u!114 &490959283001111107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,6 +621,18 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7412962706852856692}
+        m_TargetAssemblyTypeName: CoinDrop, Assembly-CSharp
+        m_MethodName: DropMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 490959283001111106}
         m_TargetAssemblyTypeName: Bomber, Assembly-CSharp
         m_MethodName: Shrapnel
@@ -727,6 +741,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7412962706852856692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490959283001111113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5f3ce09e5d28c4eafb5cc09aac3e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chanceToSpawn: 40
+  coinPrefab: {fileID: 6554058333154123875, guid: c12e8b6fa469766499a722526f031141, type: 3}
 --- !u!1 &490959283033579483
 GameObject:
   m_ObjectHideFlags: 0

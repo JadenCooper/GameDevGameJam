@@ -124,8 +124,8 @@ public class ShopManager : MonoBehaviour
             if (tile != null)
             {
                 Vector3Int spawnPosition = Vector3Int.RoundToInt(shopMap.GetCellCenterWorld(position)); // it gets the position that i've given it in the array and will spawn the item thats on the corresponding stage we're in
-                shopMap.SetTile(position, null);
-                itemManager.SpawnItem(spawnPosition, gameStage);
+                shopMap.SetTile(spawnPosition, null);
+                itemManager.SpawnItem(spawnPosition, ArenaManager.instance.currentWave);
             }
         }
     }

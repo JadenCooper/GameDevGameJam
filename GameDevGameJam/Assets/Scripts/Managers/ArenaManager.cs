@@ -44,7 +44,8 @@ public class ArenaManager : MonoBehaviour
     public Wave[] waves;
     public float waveInterval = 5f;
     public UIManager uIManager;
-    private int currentWave = 0;
+    public GameObject exit, exitGate;
+    public int currentWave = 0;
     private int waveIncrementSetter = 0;
     private float lastSpwanTime;
     [SerializeField] private int enemiesSpawned = 0;
@@ -54,6 +55,8 @@ public class ArenaManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        exitGate.SetActive(true);
+        exit.SetActive(false);
         foreach (Transform t in spawnPointParent.GetComponentsInChildren<Transform>())
         {
             if (t.gameObject.name != spawnPointParent.name)
@@ -105,6 +108,15 @@ public class ArenaManager : MonoBehaviour
                 }
             }
         }
+        if((currentWave == 4 || currentWave == 9))
+        {
+            exitGate.SetActive(false);
+            exit.SetActive(true);
+        }
+        else
+        {
+            exitGate.SetActive(true);
+        }
     }
 
     public IEnumerator StartNewWave()
@@ -113,7 +125,5 @@ public class ArenaManager : MonoBehaviour
         currentWave++;
         enemiesSpawned = 0;
         yield return new WaitForSeconds(waveInterval);
-       
-        
     }
 }

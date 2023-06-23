@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3146add84450f4db77b6f654fd1d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 12
+  detectionRange: 14
   obstaclesLayerMask:
     serializedVersion: 2
     m_Bits: 200
@@ -197,10 +197,10 @@ GameObject:
   - component: {fileID: 5455369363834274247}
   - component: {fileID: 5455369363834274254}
   - component: {fileID: 3532017631341853309}
-  - component: {fileID: 5455369363834274242}
-  - component: {fileID: 5455369363834274243}
+  - component: {fileID: 2909305410360474451}
+  - component: {fileID: -8518850724071106238}
   m_Layer: 0
-  m_Name: Money Grubber
+  m_Name: MoneyGrubber
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -347,14 +347,14 @@ MonoBehaviour:
   detectionDelay: 0.05
   aiUpdateDelay: 0.05
   attackDelay: 1
-  attackDistance: 5
+  attackDistance: 2
   movementInput: {x: 0, y: 0}
   OnAttack:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5455369363834274243}
-        m_TargetAssemblyTypeName: Demon, Assembly-CSharp
-        m_MethodName: Shoot
+      - m_Target: {fileID: 2909305410360474451}
+        m_TargetAssemblyTypeName: MoneyGrubber, Assembly-CSharp
+        m_MethodName: StealMoney
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -422,7 +422,7 @@ Animator:
   m_GameObject: {fileID: 5455369363834274244}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8046ab01603f0a84782eb4a8c243af6c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 318f5dfb9bb465c45a54c3cc6f6f3407, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -450,7 +450,7 @@ MonoBehaviour:
   damage:
     baseValue: 20
   speed:
-    baseValue: 2
+    baseValue: 9
   defence:
     baseValue: 0
   weight:
@@ -501,7 +501,19 @@ MonoBehaviour:
         m_CallState: 2
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2909305410360474451}
+        m_TargetAssemblyTypeName: MoneyGrubber, Assembly-CSharp
+        m_MethodName: DropMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &3532017631341853309
 AudioSource:
   m_ObjectHideFlags: 0
@@ -512,11 +524,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bfe5e946e0263cc409da4eee971f8b4e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.684
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -598,103 +610,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &5455369363834274242
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5455369363834274244}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.679
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &5455369363834274243
+--- !u!114 &2909305410360474451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -703,29 +619,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 5455369363834274244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90aa492cff24f8c439d89c5f219ad166, type: 3}
+  m_Script: {fileID: 11500000, guid: e8fe988298c8e6046b538c9283311543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 50
-  deacceleration: 100
-  currentSpeed: 0
-  attackDelay: 10
-  isAttacking: 0
-  AttackRange: 10
-  CanAttack: 0
-  FireBall: {fileID: 3514368902704956732, guid: 51051ae6a69a4c74085b497120d285f2, type: 3}
-  Mouths:
-  - {fileID: 1313199633106487419}
-  FireballSource: {fileID: 3532017631341853309}
-  BarkSource: {fileID: 5455369363834274242}
-  FireBallClip: {fileID: 8300000, guid: ad12a3bf4f06c6449bc8c864a91630d8, type: 3}
-  DemonBarks:
-  - {fileID: 8300000, guid: 168bacca25c20844e9df3bbdf1f42ef0, type: 3}
-  - {fileID: 8300000, guid: c603e2ac4f0b49845b42ec80c354bf74, type: 3}
-  - {fileID: 8300000, guid: 6310a4db3f415244896c91c4fef74ffc, type: 3}
-  - {fileID: 8300000, guid: 19fba976ef0e63846b627c8a4e210887, type: 3}
-  characterStats: {fileID: 5455369363834274254}
-  AIData: {fileID: 5455369363834274249}
+  knockback: {fileID: -8518850724071106238}
+  stopMovement:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2909305410360474451}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  imagePrefab: {fileID: 5974522474385824281, guid: 1e0f6dd1ea7f9a249a2df0c07c8d05af, type: 3}
+  coinPrefab: {fileID: 6554058333154123875, guid: c12e8b6fa469766499a722526f031141, type: 3}
+--- !u!114 &-8518850724071106238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5455369363834274244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3e9ba4e63070e41951ba1da6484014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBackStrength: 5
+  stunDuration: 0.2
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5455369364045325513
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Guard's Sword
   icon: {fileID: 56631561, guid: 94c7c3a8eff28f3448e464cfc736e1e1, type: 3}
+  cost: 100
   damageModifier: 15
   speedModifier: 25
   defenceModifier: 2

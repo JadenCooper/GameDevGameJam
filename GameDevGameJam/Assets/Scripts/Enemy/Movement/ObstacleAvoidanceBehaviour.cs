@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObstacleAvoidanceBehaviour : SteeringBehaviour
 {
-   [SerializeField]
-   private float radius = 2f, enemyColliderSize = 0.6f;
+    [SerializeField]
+    private float radius = 2f, enemyColliderSize = 0.6f;
 
     [SerializeField]
     private bool showGizmos = true;
